@@ -4,22 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.onebeartoe</groupId>
-    <artifactId>java-libraries</artifactId>
+    <artifactId>artificial-intelligence</artifactId>
     <version>1.0</version>
 
     <packaging>pom</packaging>
 
-    <name>onebeartoe-artificial-intellegence</name>
+    <name>onebeartoe-artificial-intelligence</name>
 
     <modules>
-        <module>math</module>
-        <module>network</module>
-        <module>application</module>
-        <module>multimedia</module>
-        <module>system</module>
-        <module>science</module>
-        <module>web</module>
-        <module>mobile</module>
+        <module>generative</module>
+        <module>large-language-models</module>
     </modules>
 
     <properties>
