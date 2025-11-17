@@ -4,16 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.onebeartoe</groupId>
-    <artifactId>artificial-intelligence</artifactId>
+    <artifactId>genai-banana</artifactId>
     <version>1.0</version>
 
     <packaging>pom</packaging>
 
-    <name>onebeartoe-artificial-intelligence</name>
+    <name>onebeartoe-genai-banana</name>
 
     <modules>
-        <module>generative</module>
-        <module>large-language-models</module>
+        <module>create</module>
+        <module>edit</module>
+        <module>prompts</module>
     </modules>
 
     <properties>
