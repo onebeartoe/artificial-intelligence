@@ -1,0 +1,10 @@
+
+1> 
+what are the contents of this directory?
+
+2.a> did it but trunced output
+Go through each of these flyers and create a table that contains the following information: Event Title, Event Location, Event Date 
+
+2.b> gave full results
+Go through each of these flyers and create a table that contains the following information: Event Title, Event Location, Event Date.  Do not truncate any lines and use wordwrap within the table. Output the table to a file named flyer-summary.text
+

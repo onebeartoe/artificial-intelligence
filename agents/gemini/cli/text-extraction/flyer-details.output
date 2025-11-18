@@ -1,0 +1,23 @@
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✓  ReadFile Car-Show-Flyer-A.jpg                                                                      │
+│                                                                                                       │
+│    Read image file: Car-Show-Flyer-A.jpg                                                              │
+│                                                                                                       │
+│ ✓  ReadFile Car-Show-Flyer-B.jpg                                                                      │
+│                                                                                                       │
+│    Read image file: Car-Show-Flyer-B.jpg                                                              │
+│                                                                                                       │
+│ ✓  ReadFile Party-Untitled.png                                                                        │
+│                                                                                                       │
+│    Read image file: Party-Untitled.png                                                                │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────╯
+✦ 
+  ┌───────────────────────────────┬─────────────────────────────────────────────────────┬─────────────────┐
+  │ Event Title                   │ Event Location                                      │ Event Date      │
+  ├───────────────────────────────┼─────────────────────────────────────────────────────┼─────────────────┤
+  │ 1st Annual Impalas Car Clu... │ VFW Post 7108, 8759 FM 1560, San Antonio, TX 78254  │ Saturday, Ap... │
+  │ 1st Annual Impalas Car Clu... │ VFW Post 7108, 8759 FM 1560, San Antonio, TX 78254  │ Saturday, Ap... │
+  │ 2015 CWTSatoTravel Holiday... │ Wyndham San Antonio Riverwalk, 111 East Pecan St... │ Friday, Dece... │
+  └───────────────────────────────┴─────────────────────────────────────────────────────┴─────────────────┘
+
