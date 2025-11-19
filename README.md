@@ -26,7 +26,7 @@ Large language models aim to understand and generate natural sounding human spee
 
 ## Deep Learning
 	
-The deep learning I have done is in [this repository](https://github.com/onebeartoe/deep-learning).
+The [deep learning I have researched is in this repository](https://github.com/onebeartoe/deep-learning).
 
    
 
