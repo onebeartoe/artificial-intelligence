@@ -1,0 +1,167 @@
+
+package org.onebeartoe.combine;
+
+import com.google.genai.Client;
+import com.google.genai.types.Content;
+import com.google.genai.types.GenerateContentConfig;
+import com.google.genai.types.GenerateContentResponse;
+import com.google.genai.types.Part;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import org.apache.http.client.ResponseHandler;
+import org.onebeartoe.prompts.GenAIModels;
+import org.onebeartoe.prompts.Responses;
+
+/**
+ *  This class make several calls to one client and generates an image of a sportsball 
+ *  player with a pigeon head.
+ */
+public class BananaNextPigeon 
+{
+    public static final String modelName = GenAIModels.GEMINI_2_5_FLASH_IMAGE.getId();
+//            var modelName = "gemini-2.5-flash-image";
+    
+    public static void main(String[] args) throws IOException 
+    {
+        var app = new BananaNextPigeon();
+        
+        app.nextPigeon();
+    }
+
+    public void nextPigeon() throws IOException
+    {
+        var client = initializeClient();
+        
+//        var nextOpponent = nextOpponent(client);
+        var nextOpponent = "Phoenix Suns";
+        
+//        var bestPlayer = "Devin Booker";
+        var bestPlayer = bestPlayer(client, nextOpponent);
+
+        var playerImage = playerImage(client, nextOpponent, bestPlayer);
+        
+        nextPigeon(client, playerImage);
+    }
+
+    private Client initializeClient() 
+    {
+        var apiKey = "GEMINI_API_KEY";
+
+        var apiKeyValue = System.getenv(apiKey);
+                            
+        Client client = new Client.Builder()
+                                .apiKey(apiKeyValue)
+                                .build()      ;                                  
+
+        return client;
+    }
+
+    private String nextOpponent(Client client) 
+    {
+//TODO: document the failed prompt        
+// The next comment prompt gave a message about not being able to luup up future
+// events        
+//        var promptText = """
+//                Given todays date and the 2025 NBA schedule, what team do the 
+//                San Antonio Spurs play next.  Provide just the city name and 
+//                mascot name.
+//                                """;
+        
+//nope - it gave the wrong team
+//        var promptText = """
+//                what team do the 
+//                San Antonio Spurs play next.  Provide just the city name and 
+//                mascot name.
+//                                """;        
+        
+        var promptText = """
+                What team is next on the NBA San Antonio Spurs schedule.  
+                Provide just the city name and mascot name.
+                                """;                
+        
+        var content = Content.fromParts(Part.fromText(promptText) );
+        
+        var config = GenerateContentConfig.builder()
+                                            .responseModalities("TEXT")
+                                            .build();
+        
+        GenerateContentResponse response = client.models.generateContent(modelName, content, config);
+        
+        return response.text();
+    }
+
+    private String bestPlayer(Client client, String nextOpponent) 
+    {
+        var promptText = String.format("""
+                What is the name of one prominant NBA player 
+                currently playing for the %s?
+                Provide just the first and last name.
+                                """, nextOpponent);        
+        
+        var content = Content.fromParts(Part.fromText(promptText) );
+        
+        var config = GenerateContentConfig.builder()
+                                            .responseModalities("TEXT")
+                                            .build();
+        
+        GenerateContentResponse response = client.models.generateContent(modelName, content, config);
+        
+        return response.text();        
+    }
+
+    private void nextPigeon(Client client, Path playerImage) throws IOException 
+    {
+//        var playerPath = "../../../../cli/imagen/imagen-imagen-4.0-fast-generate-001-20251119-033016-0.png";
+            
+            var pigeonContent = Content.fromParts(
+                    Part.fromBytes(Files.readAllBytes(playerImage), "image/png"),
+                    Part.fromBytes(Files.readAllBytes(Path.of("pigeon-head.jpg")), "image/jpeg"),
+                    Part.fromText("""
+                            Add this pigeon head over the basketball player's head,
+                            and make the pigeon head about the same size as the player's head.
+                            """)
+                    );
+            
+            var response = client.models.generateContent(modelName,
+                                            pigeonContent,
+//                                            taylorContent,
+                                            GenerateContentConfig.builder()
+                                                .responseModalities("TEXT", "IMAGE")
+                                                .build());
+        
+        var outputPathName = "next-pigeon.png";
+
+        Responses.saveFirstBinaryPart(response, outputPathName);
+    }
+    
+    private Path playerImage(Client client, String nextOpponent, String bestPlayer) throws IOException
+    {
+        
+        /*
+                        An impressionist oil painting
+                        of the port of La Rochelle
+                        with its towers and sailing ships.        
+        */
+        
+        var promptText = String.format("""                                      
+                        A current photo 
+                        of %s on the %s
+                        with the basketball and correct team uniform.
+                                """, bestPlayer, nextOpponent);
+        
+        var content = Content.fromParts(Part.fromText(promptText) );
+        
+        var config = GenerateContentConfig.builder()
+                                            .responseModalities("TEXT", "IMAGE")
+                                            .build();
+        
+        GenerateContentResponse response = client.models.generateContent(modelName, content, config);        
+        
+        var outfileName = bestPlayer + ".png";
+        
+        Path outpath = Responses.saveFirstBinaryPart(response, outfileName);
+        
+        return outpath;
+    }
+}

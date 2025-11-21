@@ -8,6 +8,7 @@ import java.util.Objects;
 
 import com.google.genai.types.GenerateContentResponse;
 import com.google.genai.types.Part;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -50,7 +51,7 @@ public class Responses
         return formattedDateTime;
     }
     
-    public static void saveFirstBinaryPart(GenerateContentResponse response, String outpathPathName) throws IOException 
+    public static Path saveFirstBinaryPart(GenerateContentResponse response, String outpathPathName) throws IOException 
     {
         byte [] data = Responses.firstBinaryPart(response);
         
@@ -61,5 +62,7 @@ public class Responses
         IO.println("Outputting image to this path: \n" + outPath);
         
         Files.write(outPath, data);
+        
+        return outPath;
     }    
 }
