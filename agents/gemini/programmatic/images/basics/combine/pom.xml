@@ -18,4 +18,12 @@
     </properties>
     
     <name>onebeartoe-genai-banana-combine</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.onebeartoe</groupId>
+            <artifactId>prompts</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

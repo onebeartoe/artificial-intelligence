@@ -21,11 +21,11 @@
     <name>onebeartoe-genai-banana-create</name>
     
     <dependencies>
-	<dependency>
+<!--	<dependency>
 	    <groupId>com.google.genai</groupId>
 	    <artifactId>google-genai</artifactId>
 	    <version>1.15.0</version>
-	</dependency>
+	</dependency>-->
         
         <dependency>
             <groupId>org.onebeartoe</groupId>

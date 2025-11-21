@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
+import org.onebeartoe.prompts.Responses;
 
 public class BananaEdit 
 {
@@ -67,21 +68,11 @@ var response = client.models.generateContent(modelName,
         .build());            
             
 
+            var outputPathName = "san-antonio-riverwalk.png";
+            
+            Responses.saveFirstBinaryPart(response, outputPathName);            
             
             
-for (Part part : Objects.requireNonNull(response.parts())) {
-    if (part.inlineData().isPresent()) {
-        var blob = part.inlineData().get();
-        if (blob.data().isPresent()) {
-            try {
-                Files.write(Paths.get("oil-2025-11-20.png"), blob.data().get());
-                break;
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-}
 
         }
     }
