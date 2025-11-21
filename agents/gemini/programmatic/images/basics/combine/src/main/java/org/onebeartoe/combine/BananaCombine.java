@@ -44,22 +44,33 @@ Client client = new Client.Builder()
 // make this a static or enum                    
             var modelName = "gemini-2.5-flash-image";
 
-        
-
-            var response = client.models.generateContent(modelName,
-                Content.fromParts(
+            var taylorContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(Path.of("decor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("taylor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("red-dress.png")), "image/png"),
                     Part.fromText("""
                         Add this person to the exterior decor,
                         and make her wear the red dress.
-                        """)
-                ),
-                GenerateContentConfig.builder()
-                    .responseModalities("TEXT", "IMAGE")
-                    .build());
+                        """));
 
+            var playerPath = "../../../../cli/imagen/imagen-imagen-4.0-fast-generate-001-20251119-033016-0.png";
+            
+            var pigeonContent = Content.fromParts(
+                                            Part.fromBytes(Files.readAllBytes(Path.of(playerPath)), "image/png"),
+                                            Part.fromBytes(Files.readAllBytes(Path.of("pigeon-head.jpg")), "image/jpeg"),
+                                            Part.fromText("""
+                                                    Add this pigeon head over the basketball player's 
+                                                          head,
+                                                    and make the pigeon head about the same size as the player's head.
+                                                    """)
+                                            );
+            
+            var response = client.models.generateContent(modelName,
+                                            pigeonContent,
+//                                            taylorContent,
+                                            GenerateContentConfig.builder()
+                                                .responseModalities("TEXT", "IMAGE")
+                                                .build());
         
             var outputPathName = "red-taylor-decor.png";
 
