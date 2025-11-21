@@ -25,6 +25,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+	<dependency>
+	    <groupId>com.google.genai</groupId>
+	    <artifactId>google-genai</artifactId>
+	    <version>1.15.0</version>
+	</dependency>        
+    </dependencies>    
+
     <build>
         <!-- To define the plugin version in your parent POM -->
         <pluginManagement>
@@ -59,15 +67,8 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-
-            
-
-      
-
+            </plugin>      
         </plugins>
     </build>
-  
-
 </project>
 

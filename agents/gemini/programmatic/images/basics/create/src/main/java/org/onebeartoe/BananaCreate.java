@@ -2,24 +2,25 @@ package org.onebeartoe;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentConfig;
-import com.google.genai.types.Part;
+import com.google.genai.types.GenerateContentResponse;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Objects;
+import org.onebeartoe.prompts.Prompts;
+import org.onebeartoe.prompts.Responses;
 
 public class BananaCreate 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {
         var apiKey = "GEMINI_API_KEY";
 //        var apiKey = "GOOGLE_API_KEY";
 
 
+// TODO: remove this demo code
+var somePrompt = Prompts.bestPlayer;
 
-
-
-
+// TODO: move these to the Prompts class
 var oilPrompt =                 """
         An impressionist oil painting
         of the port of La Rochelle
@@ -70,21 +71,9 @@ Client client = new Client.Builder()
         .build()
             );
 
+            var outputPathName = "oil.png";
             
-            
-for (Part part : Objects.requireNonNull(response.parts())) {
-    if (part.inlineData().isPresent()) {
-        var blob = part.inlineData().get();
-        if (blob.data().isPresent()) {
-            try {
-                Files.write(Paths.get("oil.png"), blob.data().get());
-                break;
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-}            
+            Responses.saveFirstBinaryPart(response, outputPathName);
         }
     }
 }
