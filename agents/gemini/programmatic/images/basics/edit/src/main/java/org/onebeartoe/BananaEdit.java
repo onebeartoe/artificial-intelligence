@@ -74,14 +74,15 @@ for (Part part : Objects.requireNonNull(response.parts())) {
         var blob = part.inlineData().get();
         if (blob.data().isPresent()) {
             try {
-                Files.write(Paths.get("oil.png"), blob.data().get());
+                Files.write(Paths.get("oil-2025-11-20.png"), blob.data().get());
                 break;
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
     }
-}            
+}
+
         }
     }
 }

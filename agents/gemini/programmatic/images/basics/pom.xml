@@ -15,6 +15,7 @@
         <module>create</module>
         <module>edit</module>
         <module>prompts</module>
+        <module>combine</module>
     </modules>
 
     <properties>

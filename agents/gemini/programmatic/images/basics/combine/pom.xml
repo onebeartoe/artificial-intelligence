@@ -9,14 +9,13 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>prompts</artifactId>
+    <artifactId>banana-combine</artifactId>
 
     <packaging>jar</packaging>
 
     <properties>
-        <exec.mainClass>org.onebeartoe.prompts.Prompts</exec.mainClass>
+        <exec.mainClass>org.onebeartoe.combine.Combine</exec.mainClass>
     </properties>
-
-    <name>onebeartoe-genai-banana-prompts</name>
-
+    
+    <name>onebeartoe-genai-banana-combine</name>
 </project>

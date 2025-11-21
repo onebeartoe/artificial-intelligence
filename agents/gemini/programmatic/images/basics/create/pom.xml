@@ -25,6 +25,12 @@
 	    <groupId>com.google.genai</groupId>
 	    <artifactId>google-genai</artifactId>
 	    <version>1.15.0</version>
-	</dependency>        
+	</dependency>
+        
+        <dependency>
+            <groupId>org.onebeartoe</groupId>
+            <artifactId>prompts</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 </project>
