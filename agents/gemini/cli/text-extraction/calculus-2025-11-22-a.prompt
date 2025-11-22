@@ -1,0 +1,8 @@
+
+Extract all the text in the image named calculus-2025-11-22.jpeg.
+Keep the extracted text formatted as seen in the image
+Display the extracted text on screen.
+Save the extracted text to a file named calculus-2025-11-22.jpeg.extracted.text.
+
+!!!!!!!!!!!!!
+nope, it asked to install tesseract
