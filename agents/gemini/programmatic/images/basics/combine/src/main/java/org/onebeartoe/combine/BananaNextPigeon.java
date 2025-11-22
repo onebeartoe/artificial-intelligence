@@ -111,21 +111,18 @@ public class BananaNextPigeon
     }
 
     private void nextPigeon(Client client, Path playerImage) throws IOException 
-    {
-//        var playerPath = "../../../../cli/imagen/imagen-imagen-4.0-fast-generate-001-20251119-033016-0.png";
-            
-            var pigeonContent = Content.fromParts(
+    {            
+        var pigeonContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(playerImage), "image/png"),
-                    Part.fromBytes(Files.readAllBytes(Path.of("pigeon-head.jpg")), "image/jpeg"),
+                    Part.fromBytes(Files.readAllBytes(Path.of("/home/luke/Workspace/owner/next-pigeon/DO-NOT-COMMIT-pigion-head.png")), "image/png"),
                     Part.fromText("""
                             Add this pigeon head over the basketball player's head,
                             and make the pigeon head about the same size as the player's head.
                             """)
                     );
             
-            var response = client.models.generateContent(modelName,
+        var response = client.models.generateContent(modelName,
                                             pigeonContent,
-//                                            taylorContent,
                                             GenerateContentConfig.builder()
                                                 .responseModalities("TEXT", "IMAGE")
                                                 .build());
@@ -137,11 +134,11 @@ public class BananaNextPigeon
     
     private Path playerImage(Client client, String nextOpponent, String bestPlayer) throws IOException
     {
-        
         /*
-                        An impressionist oil painting
-                        of the port of La Rochelle
-                        with its towers and sailing ships.        
+        Sample descriptive image prompt:
+            An impressionist oil painting
+            of the port of La Rochelle
+            with its towers and sailing ships.        
         */
         
         var promptText = String.format("""                                      
