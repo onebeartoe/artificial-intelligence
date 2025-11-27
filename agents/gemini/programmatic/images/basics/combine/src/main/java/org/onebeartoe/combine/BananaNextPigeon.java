@@ -9,7 +9,6 @@ import com.google.genai.types.Part;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import org.apache.http.client.ResponseHandler;
 import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Prompts;
 import org.onebeartoe.prompts.Responses;
@@ -96,10 +95,7 @@ public class BananaNextPigeon
         var pigeonContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(playerImage), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("/home/luke/Workspace/owner/next-pigeon/DO-NOT-COMMIT-pigion-head.png")), "image/png"),
-                    Part.fromText("""
-                            Add this pigeon head over the basketball player's head,
-                            and make the pigeon head about the same size as the player's head.
-                            """)
+                    Part.fromText(Prompts.SportsBall.NEXT_PIGEON)
                     );
             
         var response = client.models.generateContent(modelName,
@@ -122,11 +118,7 @@ public class BananaNextPigeon
             with its towers and sailing ships.        
         */
         
-        var promptText = String.format("""                                      
-                        A current photo 
-                        of %s on the %s
-                        with the basketball and correct team uniform.
-                                """, bestPlayer, nextOpponent);
+        var promptText = String.format(Prompts.SportsBall.PLAYER_IMAGE, bestPlayer, nextOpponent);
         
         var content = Content.fromParts(Part.fromText(promptText) );
         

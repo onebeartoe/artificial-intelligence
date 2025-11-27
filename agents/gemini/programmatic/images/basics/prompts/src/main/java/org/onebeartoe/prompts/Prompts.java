@@ -25,5 +25,16 @@ public class Prompts
                 currently playing for the %s?
                 Provide just the first and last name.
                                 """;
+        
+        public final static String PLAYER_IMAGE = """                                      
+                        A current photo 
+                        of %s on the %s
+                        with the basketball and correct team uniform.
+                                """;
+        
+        public final static String NEXT_PIGEON = """
+                            Add this pigeon head over the basketball player's head,
+                            and make the pigeon head about the same size as the player's head.
+                            """;
     }
 }
