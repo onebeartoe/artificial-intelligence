@@ -31,10 +31,10 @@ public class BananaNextPigeon
 
     public void nextPigeon() throws IOException
     {
-        var client = initializeClient();
+        var client = GenAIModels.initializeClient();
         
-//        var nextOpponent = nextOpponent(client);
-        var nextOpponent = "Phoenix Suns";
+        var nextOpponent = nextOpponent(client);
+//        var nextOpponent = "Phoenix Suns";
         
 //        var bestPlayer = "Devin Booker";
         var bestPlayer = bestPlayer(client, nextOpponent);
@@ -42,19 +42,6 @@ public class BananaNextPigeon
         var playerImage = playerImage(client, nextOpponent, bestPlayer);
         
         nextPigeon(client, playerImage);
-    }
-
-    private Client initializeClient() 
-    {
-        var apiKey = "GEMINI_API_KEY";
-
-        var apiKeyValue = System.getenv(apiKey);
-                            
-        Client client = new Client.Builder()
-                                .apiKey(apiKeyValue)
-                                .build()      ;                                  
-
-        return client;
     }
 
     private String nextOpponent(Client client) 
