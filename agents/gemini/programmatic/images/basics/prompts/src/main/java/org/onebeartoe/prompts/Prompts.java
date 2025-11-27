@@ -17,4 +17,9 @@ public class Prompts
     {
         System.out.println("Hello World!");
     }
+    
+    public class SportsBall
+    {
+        public final static String s = "jjj";
+    }
 }

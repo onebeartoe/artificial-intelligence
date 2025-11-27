@@ -71,9 +71,6 @@ var response = client.models.generateContent(modelName,
             var outputPathName = "san-antonio-riverwalk.png";
             
             Responses.saveFirstBinaryPart(response, outputPathName);            
-            
-            
-
         }
     }
 }

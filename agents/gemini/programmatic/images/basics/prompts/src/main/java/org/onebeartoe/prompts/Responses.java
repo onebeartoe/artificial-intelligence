@@ -8,6 +8,7 @@ import java.util.Objects;
 
 import com.google.genai.types.GenerateContentResponse;
 import com.google.genai.types.Part;
+import java.io.IO;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
