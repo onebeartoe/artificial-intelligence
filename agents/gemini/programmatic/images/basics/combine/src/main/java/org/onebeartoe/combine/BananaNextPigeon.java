@@ -59,10 +59,7 @@ public class BananaNextPigeon
 
     private String nextOpponent(Client client) 
     {        
-        var promptText = """
-                What team is next on the NBA San Antonio Spurs schedule.  
-                Provide just the city name and mascot name.
-                                """;                
+        var promptText = Prompts.SportsBall.NEXT_OPPONENT;                
         
         var content = Content.fromParts(Part.fromText(promptText) );
         
@@ -110,14 +107,7 @@ public class BananaNextPigeon
     }
     
     private Path playerImage(Client client, String nextOpponent, String bestPlayer) throws IOException
-    {
-        /*
-        Sample descriptive image prompt:
-            An impressionist oil painting
-            of the port of La Rochelle
-            with its towers and sailing ships.        
-        */
-        
+    {        
         var promptText = String.format(Prompts.SportsBall.PLAYER_IMAGE, bestPlayer, nextOpponent);
         
         var content = Content.fromParts(Part.fromText(promptText) );

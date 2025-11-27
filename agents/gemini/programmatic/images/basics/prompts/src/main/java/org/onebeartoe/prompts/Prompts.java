@@ -26,15 +26,30 @@ public class Prompts
                 Provide just the first and last name.
                                 """;
         
-        public final static String PLAYER_IMAGE = """                                      
-                        A current photo 
-                        of %s on the %s
-                        with the basketball and correct team uniform.
+        
+        
+        public final static String NEXT_OPPONENT = """
+                                        What team is next on the NBA San Antonio Spurs schedule.  
+                                        Provide just the city name and mascot name.
                                 """;
         
         public final static String NEXT_PIGEON = """
                             Add this pigeon head over the basketball player's head,
                             and make the pigeon head about the same size as the player's head.
                             """;
+        
+
+        /*
+        Sample descriptive image prompt:
+            An impressionist oil painting
+            of the port of La Rochelle
+            with its towers and sailing ships.        
+        */        
+        
+        public final static String PLAYER_IMAGE = """                                      
+                        A current photo 
+                        of %s on the %s
+                        with the basketball and correct team uniform.
+                                """;
     }
 }
