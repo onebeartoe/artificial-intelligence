@@ -13,9 +13,17 @@ public class Prompts
 // Generate an image of the current best player for the San Antonio Spurs.     
 // Generate an image of the current best player for the Atlanta Hawks.
     
-    public static void main(String[] args) 
+    public class Marketing
     {
-        System.out.println("Hello World!");
+        public final static String PRODUCT_LABEL = """
+                                        take the image 
+                                        and    create an old timey marketing label 
+                                        in the fashion of Jack Daniels branding.  Don't actuall include Jack Daniels in the lable, just use the style.                                      
+                                        center the guy's head in the image in the label.
+                                                   
+                                        The label is for a product with q-tips soaked 
+                                        in kerosene for lighting camp fires.
+                                                   """;
     }
     
     public class SportsBall
