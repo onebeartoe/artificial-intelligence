@@ -39,6 +39,7 @@ var funkyPrompt = """
 //    .vertexAI(true)
 //    .build()
                 
+var ploop = Prompts.SportsBall.s;
                 
 //!!                
 Client client = new Client.Builder()

@@ -20,6 +20,10 @@ public class Prompts
     
     public class SportsBall
     {
-        public final static String s = "jjj";
+        public final static String BEST_PLAYER = """
+                What is the name of one prominant NBA player 
+                currently playing for the %s?
+                Provide just the first and last name.
+                                """;
     }
 }

@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import org.apache.http.client.ResponseHandler;
 import org.onebeartoe.prompts.GenAIModels;
+import org.onebeartoe.prompts.Prompts;
 import org.onebeartoe.prompts.Responses;
 
 /**
@@ -58,23 +59,7 @@ public class BananaNextPigeon
     }
 
     private String nextOpponent(Client client) 
-    {
-//TODO: document the failed prompt        
-// The next comment prompt gave a message about not being able to luup up future
-// events        
-//        var promptText = """
-//                Given todays date and the 2025 NBA schedule, what team do the 
-//                San Antonio Spurs play next.  Provide just the city name and 
-//                mascot name.
-//                                """;
-        
-//nope - it gave the wrong team
-//        var promptText = """
-//                what team do the 
-//                San Antonio Spurs play next.  Provide just the city name and 
-//                mascot name.
-//                                """;        
-        
+    {        
         var promptText = """
                 What team is next on the NBA San Antonio Spurs schedule.  
                 Provide just the city name and mascot name.
@@ -93,11 +78,7 @@ public class BananaNextPigeon
 
     private String bestPlayer(Client client, String nextOpponent) 
     {
-        var promptText = String.format("""
-                What is the name of one prominant NBA player 
-                currently playing for the %s?
-                Provide just the first and last name.
-                                """, nextOpponent);        
+        var promptText = String.format(Prompts.SportsBall.BEST_PLAYER, nextOpponent);        
         
         var content = Content.fromParts(Part.fromText(promptText) );
         
