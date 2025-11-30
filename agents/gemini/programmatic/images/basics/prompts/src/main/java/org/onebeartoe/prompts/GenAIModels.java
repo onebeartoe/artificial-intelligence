@@ -47,11 +47,20 @@ public enum GenAIModels
                                 .apiKey(apiKeyValue)
                                 .build()      ;                                  
 
+// is this client biulder NEEDED for Vertex?
+//Client client = new Client.Builder()
+//    .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
+//    .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
+//    .vertexAI(true)
+//    .build()
+        
+        
         return client;
     }    
     
     @Override
-    public String toString() {
+    public String toString() 
+    {
         return modelName;
     }
 }
