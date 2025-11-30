@@ -8,6 +8,7 @@ import com.google.genai.types.Part;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Responses;
 
 /**
@@ -38,11 +39,7 @@ Client client = new Client.Builder()
                 
                 ) 
         {
-
-//!!!!!!!!!
-//TODO:!                    
-// make this a static or enum                    
-            var modelName = "gemini-2.5-flash-image";
+            var modelName = GenAIModels.GEMINI_2_5_FLASH_IMAGE.getId();
 
             var taylorContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(Path.of("decor.png")), "image/png"),

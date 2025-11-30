@@ -9,8 +9,8 @@ import com.google.genai.types.Part;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import org.apache.http.client.ResponseHandler;
 import org.onebeartoe.prompts.GenAIModels;
+import org.onebeartoe.prompts.Prompts;
 import org.onebeartoe.prompts.Responses;
 
 /**
@@ -31,7 +31,7 @@ public class BananaNextPigeon
 
     public void nextPigeon() throws IOException
     {
-        var client = initializeClient();
+        var client = GenAIModels.initializeClient();
         
         var nextOpponent = nextOpponent(client);
 //        var nextOpponent = "Phoenix Suns";
@@ -44,52 +44,9 @@ public class BananaNextPigeon
         nextPigeon(client, playerImage);
     }
 
-    private Client initializeClient() 
-    {
-        var apiKey = "GEMINI_API_KEY";
-
-        var apiKeyValue = System.getenv(apiKey);
-                            
-        Client client = new Client.Builder()
-                                .apiKey(apiKeyValue)
-                                .build()      ;                                  
-
-        return client;
-    }
-
     private String nextOpponent(Client client) 
-    {
-//TODO: document the failed prompt        
-// The next comment prompt gave a message about not being able to luup up future
-// events        
-//        var promptText = """
-//                Given todays date and the 2025 NBA schedule, what team do the 
-//                San Antonio Spurs play next.  Provide just the city name and 
-//                mascot name.
-//                                """;
-        
-//nope - it gave the wrong team
-//        var promptText = """
-//                what team do the 
-//                San Antonio Spurs play next.  Provide just the city name and 
-//                mascot name.
-//                                """;        
-        
-        
-// still nope - off for some reason        
-//        var promptText = """
-//                What team is next on the NBA San Antonio Spurs schedule.  
-//                Provide just the city name and mascot name.
-//             
-//""";                
-
-
-//TODO: try this:        
-        var promptText = """
-                         who do the san antonio spurs play next and on what date?
-                         Provide just the city name and mascot name on one line
-                         and the date in this format yyyy-MM-dd-HHmm on the next ine.
-                         """;
+    {        
+        var promptText = Prompts.SportsBall.NEXT_OPPONENT;                
         
         var content = Content.fromParts(Part.fromText(promptText) );
         
@@ -108,11 +65,7 @@ public class BananaNextPigeon
 
     private String bestPlayer(Client client, String nextOpponent) 
     {
-        var promptText = String.format("""
-                What is the name of one prominant NBA player 
-                currently playing for the %s?
-                Provide just the first and last name.
-                                """, nextOpponent);        
+        var promptText = String.format(Prompts.SportsBall.BEST_PLAYER, nextOpponent);        
         
         var content = Content.fromParts(Part.fromText(promptText) );
         
@@ -130,10 +83,7 @@ public class BananaNextPigeon
         var pigeonContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(playerImage), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("/home/luke/Workspace/owner/next-pigeon/DO-NOT-COMMIT-pigion-head.png")), "image/png"),
-                    Part.fromText("""
-                            Add this pigeon head over the basketball player's head,
-                            and make the pigeon head about the same size as the player's head.
-                            """)
+                    Part.fromText(Prompts.SportsBall.NEXT_PIGEON)
                     );
             
         var response = client.models.generateContent(modelName,
@@ -148,19 +98,8 @@ public class BananaNextPigeon
     }
     
     private Path playerImage(Client client, String nextOpponent, String bestPlayer) throws IOException
-    {
-        /*
-        Sample descriptive image prompt:
-            An impressionist oil painting
-            of the port of La Rochelle
-            with its towers and sailing ships.        
-        */
-        
-        var promptText = String.format("""                                      
-                        A current photo 
-                        of %s on the %s
-                        with the basketball and correct team uniform.
-                                """, bestPlayer, nextOpponent);
+    {        
+        var promptText = String.format(Prompts.SportsBall.PLAYER_IMAGE, bestPlayer, nextOpponent);
         
         var content = Content.fromParts(Part.fromText(promptText) );
         

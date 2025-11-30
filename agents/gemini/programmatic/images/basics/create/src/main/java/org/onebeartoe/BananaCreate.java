@@ -39,6 +39,7 @@ var funkyPrompt = """
 //    .vertexAI(true)
 //    .build()
                 
+
                 
 //!!                
 Client client = new Client.Builder()
