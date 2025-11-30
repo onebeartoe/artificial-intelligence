@@ -125,7 +125,11 @@ public class Responses
     {
         List<Part> binaryParts = new ArrayList();
         
-        for (Part part : Objects.requireNonNull(response.parts())) 
+        var allParts = response.parts();
+        
+        System.out.println("allParts count = " + allParts.size() );
+        
+        for (Part part : Objects.requireNonNull(allParts)) 
         {
             if (part.inlineData().isPresent()) 
             {
