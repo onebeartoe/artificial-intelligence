@@ -1,6 +1,8 @@
 
 package org.onebeartoe.combine;
 
+import javax.activation.MimetypesFileTypeMap;
+
 import com.google.genai.Client;
 import com.google.genai.types.Content;
 import com.google.genai.types.GenerateContentConfig;
@@ -27,6 +29,14 @@ public class BananaNextPigeon
         var app = new BananaNextPigeon();
         
         app.nextPigeon();
+        
+        
+MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
+//import javax.activation.MimetypesFileTypeMap;
+//MimetypesFileTypeMap.getDefaultFileTypeMap().getContentType( new file)
+//fileTypeMap.
+
+
     }
 
     public void nextPigeon() throws IOException
@@ -79,9 +89,14 @@ public class BananaNextPigeon
     }
 
     private void nextPigeon(Client client, Path playerImage) throws IOException 
-    {            
+    {   
+//Part p = null;
+//p.fileData().get().
+        
         var pigeonContent = Content.fromParts(
-                    Part.fromBytes(Files.readAllBytes(playerImage), "image/png"),
+                    Part.fromBytes(Files.readAllBytes(playerImage), "image/png")
+                
+                ,
                     Part.fromBytes(Files.readAllBytes(Path.of("/home/luke/Workspace/owner/next-pigeon/DO-NOT-COMMIT-pigion-head.png")), "image/png"),
                     Part.fromText(Prompts.SportsBall.NEXT_PIGEON)
                     );

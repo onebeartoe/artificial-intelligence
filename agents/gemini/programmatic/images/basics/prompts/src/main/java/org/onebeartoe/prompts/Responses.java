@@ -8,7 +8,7 @@ import java.util.Objects;
 
 import com.google.genai.types.GenerateContentResponse;
 import com.google.genai.types.Part;
-import java.io.IO;
+//import java.io.IO;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,6 +19,12 @@ import java.time.format.DateTimeFormatter;
  */
 public class Responses 
 {       
+    /**
+     * @param response
+     * @return
+     * @deprecated - use allBinaryParts()
+     */
+    @Deprecated
     public static byte [] firstBinaryPart(GenerateContentResponse response)
     {
         byte [] data = null;
@@ -52,6 +58,15 @@ public class Responses
         return formattedDateTime;
     }
     
+    /**
+     * 
+     * @param response
+     * @param outpathPathName
+     * @return
+     * @throws IOException
+     * @deprecated - use saveAllBinaryParts()
+     */
+    @Deprecated
     public static Path saveFirstBinaryPart(GenerateContentResponse response, String outpathPathName) throws IOException 
     {
         byte [] data = Responses.firstBinaryPart(response);
