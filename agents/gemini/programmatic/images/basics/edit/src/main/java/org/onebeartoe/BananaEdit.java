@@ -60,6 +60,8 @@ var stormyNightPrompt = """
 var response = client.models.generateContent(modelName,
     Content.fromParts(
         Part.fromBytes(
+//TODO: fix the input image, it was overwritten by having the same name
+//TODO:                             and timestamp it                
             Files.readAllBytes(Path.of("san-antonio-riverwalk.png")), "image/png"),
         Part.fromText(niceDayPrompt)
     ),
@@ -68,7 +70,7 @@ var response = client.models.generateContent(modelName,
         .build());            
             
 
-            var outputPathName = "san-antonio-riverwalk.png";
+            var outputPathName = "san-antonio-riverwalk-edited.png";
             
             Responses.saveFirstBinaryPart(response, outputPathName);            
         }

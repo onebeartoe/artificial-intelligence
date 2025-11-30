@@ -54,7 +54,6 @@ public enum GenAIModels
 //    .vertexAI(true)
 //    .build()
         
-        
         return client;
     }    
     

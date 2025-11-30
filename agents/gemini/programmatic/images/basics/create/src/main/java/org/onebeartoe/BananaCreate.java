@@ -2,16 +2,15 @@ package org.onebeartoe;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentConfig;
-import com.google.genai.types.GenerateContentResponse;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
+import java.util.List;
 import org.onebeartoe.prompts.Prompts;
 import org.onebeartoe.prompts.Responses;
 
 public class BananaCreate 
 {
-    public static void main(String[] args) throws IOException 
+    public static void main(String[] args) throws IOException, Exception 
     {
         var apiKey = "GEMINI_API_KEY";
 //        var apiKey = "GOOGLE_API_KEY";
@@ -33,15 +32,6 @@ var funkyPrompt = """
         """;
 
         try (
-//Client client = new Client.Builder()
-//    .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
-//    .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
-//    .vertexAI(true)
-//    .build()
-                
-
-                
-//!!                
 Client client = new Client.Builder()
 .apiKey(System.getenv(apiKey))
 .build()
@@ -74,7 +64,8 @@ Client client = new Client.Builder()
 
             var outputPathName = "oil.png";
             
-            Responses.saveFirstBinaryPart(response, outputPathName);
+            List<Path> outpaths = Responses.saveAllBinaryParts(response, outputPathName);
+//            Responses.saveFirstBinaryPart(response, outputPathName);
         }
     }
 }
