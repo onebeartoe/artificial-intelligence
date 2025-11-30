@@ -33,8 +33,8 @@ public class BananaNextPigeon
     {
         var client = initializeClient();
         
-//        var nextOpponent = nextOpponent(client);
-        var nextOpponent = "Phoenix Suns";
+        var nextOpponent = nextOpponent(client);
+//        var nextOpponent = "Phoenix Suns";
         
 //        var bestPlayer = "Devin Booker";
         var bestPlayer = bestPlayer(client, nextOpponent);
@@ -75,10 +75,21 @@ public class BananaNextPigeon
 //                mascot name.
 //                                """;        
         
+        
+// still nope - off for some reason        
+//        var promptText = """
+//                What team is next on the NBA San Antonio Spurs schedule.  
+//                Provide just the city name and mascot name.
+//             
+//""";                
+
+
+//TODO: try this:        
         var promptText = """
-                What team is next on the NBA San Antonio Spurs schedule.  
-                Provide just the city name and mascot name.
-                                """;                
+                         who do the san antonio spurs play next and on what date?
+                         Provide just the city name and mascot name on one line
+                         and the date in this format yyyy-MM-dd-HHmm on the next ine.
+                         """;
         
         var content = Content.fromParts(Part.fromText(promptText) );
         
@@ -88,7 +99,11 @@ public class BananaNextPigeon
         
         GenerateContentResponse response = client.models.generateContent(modelName, content, config);
         
-        return response.text();
+        var nextOpponent = response.text();
+
+        System.out.println("nextOpponent = " + nextOpponent);
+        
+        return nextOpponent;
     }
 
     private String bestPlayer(Client client, String nextOpponent) 
