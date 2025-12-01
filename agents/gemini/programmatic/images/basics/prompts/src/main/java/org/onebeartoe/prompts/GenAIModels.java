@@ -10,7 +10,9 @@ public enum GenAIModels
     
     IMAGEN("imagen", "Imagen", "Generates studio-grade images from text prompts."),
 
-    VEO("veo", "Veo", "Generates videos from text prompts and images."),
+    VEO("veo-3.0-generate-001", "Veo", "Generates videos from text prompts and images."),
+    
+    VEO_FAST("veo-3.0-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images."),
 
     GEMMA("gemma", "Gemma", "Open models for efficient execution on low-resource devices.");
 
@@ -45,17 +47,18 @@ public enum GenAIModels
                             
         Client client = new Client.Builder()
                                 .apiKey(apiKeyValue)
-                                .build()      ;                                  
-
-// is this client biulder NEEDED for Vertex?
-//Client client = new Client.Builder()
-//    .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
-//    .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
-//    .vertexAI(true)
-//    .build()
-        
+                                .build();        
         return client;
     }    
+    
+    public static Client initializeVertexClient()
+    {
+        return new Client.Builder()
+            .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
+            .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
+            .vertexAI(true)
+            .build();
+    }
     
     @Override
     public String toString() 
