@@ -84,7 +84,7 @@ public class Responses
         return outPath;
     }    
 
-    public static List<Path> saveAllBinaryParts(GenerateContentResponse response, String outputPathName) throws IOException, Exception 
+    public static List<Path> saveAllBinaryParts(GenerateContentResponse response, String outputPathName) throws IOException
     {
         List<Part> binaryParts = Responses.allBinaryParts(response, outputPathName);
         
@@ -145,7 +145,7 @@ public class Responses
         return binaryParts;
     }
 
-    private static Path formattedOutPath(String outputPathName, String formattedDate, char iterationChar) throws Exception 
+    private static Path formattedOutPath(String outputPathName, String formattedDate, char iterationChar)
     {
         var lastIndex = outputPathName.lastIndexOf('.');                                    
         
