@@ -45,6 +45,7 @@ Client client = new Client.Builder()
                     Part.fromBytes(Files.readAllBytes(Path.of("decor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("taylor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("red-dress.png")), "image/png"),
+//TODO: move this to Promps.java                    
                     Part.fromText("""
                         Add this person to the exterior decor,
                         and make her wear the red dress.

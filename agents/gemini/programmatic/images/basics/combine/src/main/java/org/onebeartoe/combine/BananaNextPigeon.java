@@ -22,7 +22,6 @@ import org.onebeartoe.prompts.Responses;
 public class BananaNextPigeon 
 {
     public static final String modelName = GenAIModels.GEMINI_2_5_FLASH_IMAGE.getId();
-//            var modelName = "gemini-2.5-flash-image";
     
     public static void main(String[] args) throws IOException 
     {

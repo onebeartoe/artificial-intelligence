@@ -13,9 +13,25 @@ public class Prompts
 // Generate an image of the current best player for the San Antonio Spurs.     
 // Generate an image of the current best player for the Atlanta Hawks.
     
+    public class Imaging
+    {
+        public static final String IMPRESSIONIST_OIL_PAINTING = """
+                                        An impressionist oil painting
+                                        of the port of La Rochelle
+                                        with its towers and sailing ships.
+                                        """;
+        
+        public class FunkyElectricChickenLeg
+        {
+            public static final String LITERAL = "funky electric chicken leg";
+            
+            
+        }
+    }
+    
     public class Marketing
     {
-        public final static String PRODUCT_LABEL = """
+        public static final String PRODUCT_LABEL = """
                                         take the image 
                                         and    create an old timey marketing label 
                                         in the fashion of Jack Daniels branding.  Don't actuall include Jack Daniels in the lable, just use the style.                                      
