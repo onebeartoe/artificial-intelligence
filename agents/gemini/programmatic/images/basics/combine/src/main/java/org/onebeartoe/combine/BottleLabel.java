@@ -33,7 +33,11 @@ public class BottleLabel
             
         var promptText = String.format(Prompts.Marketing.PRODUCT_LABEL);
         
-        var content = Content.fromParts(Part.fromBytes(Files.readAllBytes(Path.of("beto-2023-08_n.jpg")), "image/jpeg"),
+        var betoPath = Path.of("beto-2023-08_n.jpg");
+        
+        var betoBytes = Files.readAllBytes(betoPath);
+        
+        var content = Content.fromParts(Part.fromBytes(betoBytes, "image/jpeg"),
                                         Part.fromText(promptText) );
        
         var config = GenerateContentConfig.builder()

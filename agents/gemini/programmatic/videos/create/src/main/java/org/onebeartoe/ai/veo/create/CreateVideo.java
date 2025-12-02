@@ -27,6 +27,10 @@ public abstract class CreateVideo
                 .aspectRatio("16:9")
                 .resolution("720p")
                 .generateAudio(true)
+                    
+//TODO: do it!                    
+//TODO: do it!  .numberOfVideos(3);
+        
                 .build()
         );        
         
@@ -46,6 +50,7 @@ public abstract class CreateVideo
             .flatMap(GenerateVideosResponse::generatedVideos)
             .stream()
             .flatMap(List::stream)
+//!!! catch them all!!!!                 
             .findFirst()
             .ifPresent(video -> client.files.download(video, outputPath, null));
         
