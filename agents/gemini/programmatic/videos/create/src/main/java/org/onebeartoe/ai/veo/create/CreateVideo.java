@@ -8,6 +8,8 @@ import com.google.genai.types.GenerateVideosSource;
 import com.google.genai.types.GenerateVideosSource.Builder;
 import java.util.List;
 import org.onebeartoe.prompts.GenAIModels;
+import org.onebeartoe.prompts.Responses;
+import static org.onebeartoe.prompts.Responses.formattedDate;
 
 /**
  *
@@ -39,22 +41,33 @@ public abstract class CreateVideo
         while (!operation.done().orElse(false)) 
         {
             Thread.sleep(1000);
+            
             operation = client.operations.getVideosOperation(operation, null);
         }
         
         System.out.println("Video response recieved");
+
+var formattedDate = formattedDate();
+
+char i = 'a';
         
+       
         var outputPath = "video.mp4";
+
+var formatedName = Responses.formattedOutPath(outputPath, formattedDate, i)
+                                        .toString();
         
         operation.response()
             .flatMap(GenerateVideosResponse::generatedVideos)
             .stream()
             .flatMap(List::stream)
-//!!! catch them all!!!!                 
+//TODO:!!!!
+//TODO:!!! catch them all!!!!                 
+//TODO:!!!!                
             .findFirst()
-            .ifPresent(video -> client.files.download(video, outputPath, null));
+            .ifPresent(video -> client.files.download(video, formatedName, null));
         
-        System.out.println("video output: " + outputPath);
+        System.out.println("video output: " + formatedName);
         
 return null;
     }

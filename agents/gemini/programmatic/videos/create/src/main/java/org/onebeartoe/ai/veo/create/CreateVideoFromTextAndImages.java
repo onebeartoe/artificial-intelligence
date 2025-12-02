@@ -2,23 +2,19 @@
 package org.onebeartoe.ai.veo.create;
 
 import com.google.genai.Client;
-//import com.google.genai.client.Client;
-
 
 import com.google.genai.types.GenerateVideosOperation;
 
-
 import com.google.genai.types.GenerateVideosConfig;
 import com.google.genai.types.Image;
-import com.google.genai.types.Part;
-import com.google.genai.types.Video;
-import com.google.genai.types.Content;
-import com.google.genai.types.GenerateContentResponse;
+import com.google.genai.types.GenerateVideosResponse;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
+import org.onebeartoe.prompts.Responses;
+import static org.onebeartoe.prompts.Responses.formattedDate;
 
+//!!!!!!!!!!TODO: Remove the plural on Images
 public class CreateVideoFromTextAndImages 
 {
 
@@ -27,47 +23,74 @@ public class CreateVideoFromTextAndImages
         // Ensure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION environment variables are set.
         Client client = Client.builder().vertexAI(true).build();
 
-        String prompt = "A futuristic city skyline at sunset, with flying cars. The video should have a cinematic feel.";
-        String outputGcsUri = "gs://your-output-bucket/video_output/"; // GCS bucket for output
-        String imageOneUri = "gs://your-input-bucket/image1.jpeg"; // GCS URI for image 1
-        String imageTwoUri = "gs://your-input-bucket/image2.jpeg"; // GCS URI for image 2
-
+        String prompt = """
+                        use the robot chicken as a 
+                            model for a cute futuristic pet
+                                    waling around nice park.
+                                            add flying cars in the         city skyline. 
+                                                    The video should have a cinematic feel.
+                                                                                           """;
+        
         // Define the input images as Content parts
-        List<Content> imageContents = Arrays.asList(
-            Content.builder().parts(Arrays.asList(Part.fromImage(Image.builder().gcsUri(imageOneUri).build()))).build(),
-            Content.builder().parts(Arrays.asList(Part.fromImage(Image.builder().gcsUri(imageTwoUri).build()))).build()
-            // Add a third image content part if needed (up to 3 images supported)
-        );
+        Image image = Image.fromFile("robot-chicken-b.png", "image/png");
+
+
 
         // Configure video generation parameters
         GenerateVideosConfig config = GenerateVideosConfig.builder()
                 .aspectRatio("16:9") // Example aspect ratio
-                .outputGcsUri(outputGcsUri)
                 .build();
 
         // Call the generateVideos method. Note that the Java SDK handles the input types.
         // It accepts the model ID, prompt, a list of input contents (images), and config.
         GenerateVideosOperation operation = client.models.generateVideos(
+                
+//TODO!!!!!!!1is this right????
+//TODO!!!!!!!1is this right????
+//TODO!!!!!!!1is this right????
+//TODO!!!!!!!1is this right????                
                 "veo-3.1-generate-preview", // Use a suitable Veo model
                 prompt,
-                imageContents,
+                image,
+//                imageContents,
                 config
         );
 
         System.out.println("Waiting for video generation to complete...");
 
         // Poll the operation status until the video is ready
-        while (!operation.done()) {
+        while ( ! operation.done().orElse(false) ) 
+        {
             Thread.sleep(10000); // Wait for 10 seconds
-            operation = client.operations.get(operation);
+            
+            System.out.print(".");
+            
+            operation = client.operations.getVideosOperation(operation, null);
         }
+        
+        System.out.println("Video response recieved");
 
-        if (operation.response() != null) {
-            Video generatedVideo = operation.response().generatedVideos().get(0).video();
-            System.out.println("Generated video saved to GCS URI: " + generatedVideo.uri());
-            // You can also use client.files.download to get the file locally if needed
-        } else if (operation.error() != null) {
-            System.err.println("Video generation failed: " + operation.error().message());
-        }
+        var outputName = "video.mp4";
+        
+        var formattedDate = formattedDate();
+        
+        char i = 'a';
+        
+        var formatedName = Responses.formattedOutPath(outputName, formattedDate, i)
+                                        .toString();
+                
+        
+        
+        operation.response()
+            .flatMap(GenerateVideosResponse::generatedVideos)
+            .stream()
+            .flatMap(List::stream)
+//TODO:!!!!
+//TODO:!!! catch them all!!!!                 
+//TODO:!!!!                
+            .findFirst()
+            .ifPresent(video -> client.files.download(video, formatedName, null));
+        
+        System.out.println("video output: " + formatedName);        
     }
 }

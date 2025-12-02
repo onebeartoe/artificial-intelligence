@@ -145,7 +145,7 @@ public class Responses
         return binaryParts;
     }
 
-    private static Path formattedOutPath(String outputPathName, String formattedDate, char iterationChar)
+    public static Path formattedOutPath(String outputPathName, String formattedDate, char iterationChar)
     {
         var lastIndex = outputPathName.lastIndexOf('.');                                    
         

@@ -22,9 +22,7 @@ public class CreateVideoFromText extends CreateVideo
         var promptText = Prompts.Imaging.FunkyElectricChickenLeg.LITERAL;
         
         return GenerateVideosSource.builder()
-                .prompt(promptText)
-//                .image
-.                
+                .prompt(promptText)                
                 .build();
     }
 }
