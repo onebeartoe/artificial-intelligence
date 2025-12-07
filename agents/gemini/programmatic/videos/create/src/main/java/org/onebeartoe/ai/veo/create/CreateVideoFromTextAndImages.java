@@ -11,6 +11,7 @@ import com.google.genai.types.GenerateVideosResponse;
 
 import java.io.IOException;
 import java.util.List;
+import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE_RECODER_UNWOUND_TEXT;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
@@ -31,8 +32,19 @@ public class CreateVideoFromTextAndImages
                                                     The video should have a cinematic feel.
                                                                                            """;
         
-        // Define the input images as Content parts
+        // Define the input images as Content parts        
         Image image = Image.fromFile("robot-chicken-b.png", "image/png");
+        
+        
+
+        String tapeTextPrompt = TAPE_RECODER_UNWOUND_TEXT + """
+            .       use the image as a model for animating the text as tape printing in cursive.
+                            the tape text flow downward from the cassette.
+                                animate the word printing from left to right  spelling the word in cursive.
+                                                                                           """;
+        
+        // Define the input images as Content parts        
+        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/basics/create/tape-text-2025-12-06-1742-a.png", "image/png");
 
 
 
@@ -50,9 +62,16 @@ public class CreateVideoFromTextAndImages
 //TODO!!!!!!!1is this right????
 //TODO!!!!!!!1is this right????                
                 "veo-3.1-generate-preview", // Use a suitable Veo model
-                prompt,
-                image,
-//                imageContents,
+//TODO: this is an update version, add it GenAIModels.java!!!!
+
+                
+//                prompt,
+//                image,
+                
+                tapeTextPrompt,
+                tapeTextImage,
+                
+                
                 config
         );
 

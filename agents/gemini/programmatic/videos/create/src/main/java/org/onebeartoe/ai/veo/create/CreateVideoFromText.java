@@ -10,7 +10,7 @@ import org.onebeartoe.prompts.Prompts;
 public class CreateVideoFromText extends CreateVideo
 {
     public static void main(String[] args) throws InterruptedException 
-    {
+    {        
         var app = new CreateVideoFromText();
         
         app.fromText();

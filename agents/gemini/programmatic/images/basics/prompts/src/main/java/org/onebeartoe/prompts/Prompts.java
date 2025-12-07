@@ -24,14 +24,12 @@ public class Prompts
         public class TapeRecoderUnwoundText
         {
             public static final String TAPE_RECODER_UNWOUND_TEXT = """
-                                Tape recorder spilling out a cassette tape to spell a word.
+                                Cassette tape spilling out of a tape recorder to spell a word.
                                 The word is in cursive handwritting.                                    
-                                The work is 'Sports'.
+                                The word is 'Rhythm'.
                                                                    """;
         }
-        
-        
-        
+                        
         public class FunkyElectricChickenLeg
         {
             public static final String LITERAL = "funky electric chicken leg";
