@@ -72,12 +72,7 @@ public class Prompts
                             """;
         
 
-        /*
-        Sample descriptive image prompt:
-            An impressionist oil painting
-            of the port of La Rochelle
-            with its towers and sailing ships.        
-        */        
+
         
         public final static String PLAYER_IMAGE = """                                      
                         A current photo 

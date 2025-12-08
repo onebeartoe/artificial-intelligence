@@ -5,8 +5,8 @@ import com.google.genai.Client;
 import com.google.genai.types.GenerateVideosConfig;
 import com.google.genai.types.GenerateVideosResponse;
 import com.google.genai.types.GenerateVideosSource;
-import com.google.genai.types.GenerateVideosSource.Builder;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
@@ -16,16 +16,14 @@ import static org.onebeartoe.prompts.Responses.formattedDate;
  */
 public abstract class CreateVideo 
 {
+//TODO: make this configurable    
     public static final String modelName = GenAIModels.VEO.getId();
     
     public String fromText() throws InterruptedException
     {
         Client client = GenAIModels.initializeVertexClient();
         
-        var operation = client.models.generateVideos(
-            modelName,
-            videosSource(),
-            GenerateVideosConfig.builder()
+        var config = GenerateVideosConfig.builder()
                 .aspectRatio("16:9")
                 .resolution("720p")
                 .generateAudio(true)
@@ -33,14 +31,21 @@ public abstract class CreateVideo
 //TODO: do it!                    
 //TODO: do it!  .numberOfVideos(3);
         
-                .build()
+                .build();
+        
+        var operation = client.models.generateVideos(
+            modelName,
+            videosSource(),
+            config
         );        
         
-        System.out.println("Requesting video");
+        System.out.println("Waiting for video generation to complete...");
         
         while (!operation.done().orElse(false)) 
         {
-            Thread.sleep(1000);
+            Thread.sleep(10_000); // Wait for 10 seconds
+            
+            System.out.print(".");
             
             operation = client.operations.getVideosOperation(operation, null);
         }
@@ -49,13 +54,14 @@ public abstract class CreateVideo
 
 var formattedDate = formattedDate();
 
-char i = 'a';
+
+        AtomicInteger counter = new AtomicInteger(0);
+
+
         
        
         var outputPath = "video.mp4";
 
-var formatedName = Responses.formattedOutPath(outputPath, formattedDate, i)
-                                        .toString();
         
         operation.response()
             .flatMap(GenerateVideosResponse::generatedVideos)
@@ -64,10 +70,33 @@ var formatedName = Responses.formattedOutPath(outputPath, formattedDate, i)
 //TODO:!!!!
 //TODO:!!! catch them all!!!!                 
 //TODO:!!!!                
-            .findFirst()
-            .ifPresent(video -> client.files.download(video, formatedName, null));
+            .forEach(video ->
+            {
+                char iterationChar = (char) ('a' + (char) counter.getAndIncrement() );
+                
+                var formatedName = Responses.formattedOutPath(outputPath, 
+                                                formattedDate, 
+                                                iterationChar)
+                                        .toString();
+                
+                client.files.download(video, formatedName, null);                                       
+              
+                System.out.println("video output: " + formatedName);
+            
+                if(iterationChar == 'z')
+                {
+// this can be a lot more robust
+                    var errorMessage = "The file name has reached last the laster character"
+                            + "; name overlfow reached.";
+
+                    throw new UnsupportedOperationException(errorMessage);
+                }             
+                
+                System.out.println("come now A!!!!!!");
+            });
+            
         
-        System.out.println("video output: " + formatedName);
+        
         
 return null;
     }

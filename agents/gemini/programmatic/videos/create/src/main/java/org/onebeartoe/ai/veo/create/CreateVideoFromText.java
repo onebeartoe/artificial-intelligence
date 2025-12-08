@@ -16,6 +16,11 @@ public class CreateVideoFromText extends CreateVideo
         app.fromText();
     }    
     
+    
+//TODO: move this
+//TODO: rename this to textVideoSource()
+//TODO: update the argument list to include the text as a String
+//TODO: come on, man    
     @Override
     public GenerateVideosSource videosSource() 
     {

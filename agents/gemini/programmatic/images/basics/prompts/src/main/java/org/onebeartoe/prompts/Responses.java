@@ -110,9 +110,10 @@ public class Responses
             
             iterationChar++;
             
-            if(iterationChar == 'a')
+            if(iterationChar == 'z')
             {
-                var errorMessage = "The file name ahas looped back to 'a'; name overlfow reached.";
+                var errorMessage = "The file name has reached last the laster character"
+                        + "; name overlfow reached.";
                 
                 throw new UnsupportedOperationException(errorMessage);
             }

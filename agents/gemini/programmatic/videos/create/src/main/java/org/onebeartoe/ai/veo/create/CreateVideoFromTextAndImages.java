@@ -8,6 +8,7 @@ import com.google.genai.types.GenerateVideosOperation;
 import com.google.genai.types.GenerateVideosConfig;
 import com.google.genai.types.Image;
 import com.google.genai.types.GenerateVideosResponse;
+import com.google.genai.types.GenerateVideosSource;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,12 +17,14 @@ import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
 //!!!!!!!!!!TODO: Remove the plural on Images
-public class CreateVideoFromTextAndImages 
+public class CreateVideoFromTextAndImages extends CreateVideo
 {
 
-    public static void main(String[] args) throws InterruptedException, IOException {
-        // Initialize the client. The client will automatically use Application Default Credentials.
-        // Ensure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION environment variables are set.
+    public static void main(String[] args) throws InterruptedException, IOException 
+    {
+//TODO: are the environment videos set correctly?        
+// Initialize the client. The client will automatically use Application Default Credentials.
+// Ensure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION environment variables are set.
         Client client = Client.builder().vertexAI(true).build();
 
         String prompt = """
@@ -51,6 +54,12 @@ public class CreateVideoFromTextAndImages
         // Configure video generation parameters
         GenerateVideosConfig config = GenerateVideosConfig.builder()
                 .aspectRatio("16:9") // Example aspect ratio
+                .resolution("720p")
+                .generateAudio(true)
+                
+//TODO: do it!                    
+//TODO: do it!  .numberOfVideos(3);                
+                
                 .build();
 
         // Call the generateVideos method. Note that the Java SDK handles the input types.
@@ -111,5 +120,10 @@ public class CreateVideoFromTextAndImages
             .ifPresent(video -> client.files.download(video, formatedName, null));
         
         System.out.println("video output: " + formatedName);        
+    }
+
+    @Override
+    public GenerateVideosSource videosSource() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
