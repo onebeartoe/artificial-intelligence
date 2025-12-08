@@ -44,7 +44,7 @@ public class CreateVideoFromTextAndImages
                                                                                            """;
         
         // Define the input images as Content parts        
-        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/basics/create/tape-text-2025-12-06-1742-a.png", "image/png");
+        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/basics/create/tape-text-2025-12-07-0913-a.png", "image/png");
 
 
 
@@ -80,7 +80,7 @@ public class CreateVideoFromTextAndImages
         // Poll the operation status until the video is ready
         while ( ! operation.done().orElse(false) ) 
         {
-            Thread.sleep(10000); // Wait for 10 seconds
+            Thread.sleep(10_000); // Wait for 10 seconds
             
             System.out.print(".");
             
