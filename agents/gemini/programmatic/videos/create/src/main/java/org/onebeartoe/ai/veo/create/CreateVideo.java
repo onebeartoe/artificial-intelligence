@@ -16,8 +16,10 @@ import static org.onebeartoe.prompts.Responses.formattedDate;
  */
 public abstract class CreateVideo 
 {
+//TODO:!!!!! use VEO_FAST during developemnt!!!!    
 //TODO: make this configurable    
-    public static final String modelName = GenAIModels.VEO.getId();
+//    public static final String modelName = GenAIModels.VEO.getId();
+    public static final String modelName = GenAIModels.VEO_FAST.getId();
     
     public String fromText() throws InterruptedException
     {
