@@ -45,6 +45,8 @@ public class Prompts
                                         and    create an old timey marketing label 
                                         in the fashion of Jack Daniels branding.  Don't actuall include Jack Daniels in the lable, just use the style.                                      
                                         center the guy's head in the image in the label.
+                                        
+                                        use "Old Man Beto's" as the top banner.
                                                    
                                         The label is for a product with q-tips soaked 
                                         in kerosene for lighting camp fires.
