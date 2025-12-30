@@ -19,9 +19,11 @@ Deep Learning uses neural networks to make decisions between network nodes to fo
 
 ## Natural Language Prossing (NLP)
 
-### Large Language Models (LLMs)
 
-Large language models aim to understand and generate natural sounding human speech in the form of text.
+## [Large Language Models (LLMs)](large-language-models/ollama/readme.md)
+
+
+
 
 
 ## Deep Learning
