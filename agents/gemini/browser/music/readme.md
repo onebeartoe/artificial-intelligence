@@ -16,7 +16,8 @@ This prompt gave 4 .wav files that sounded 'okay' to me, based on my prompt.  I 
 
 ----
 
-<video src='music1.flac'/>
+<video src='music1.flac'>
+</video>
 
 
 For upload to Github, I used Gemini CLI to reduce the file size.  See the 'Audio' section under Gemini CLI for the [corresponding prompt](../../cli/audio/readme.md).
