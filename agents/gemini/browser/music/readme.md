@@ -9,8 +9,9 @@ See the [FUNKY_LITTLE_BEAT](../../../gemini/programmatic/images/prompts/src/main
 This prompt gave 4 .wav files that sounded 'okay' to me, based on my prompt.
 
 <audio controls>
-    <source src="music1.flac" type="audio/x-flac">
+    <source src="music1.flac" type="audio/flac">
     Your browser does not support the audio element.
+
 </audio>
 
 For upload to Github, I used Gemini CLI to reduce the file size.  See the 'Audio' section under Gemini CLI for the [corresponding prompt](../../cli/audio/readme.md).
