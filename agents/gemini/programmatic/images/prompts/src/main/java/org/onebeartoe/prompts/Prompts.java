@@ -6,12 +6,22 @@ package org.onebeartoe.prompts;
  */
 public class Prompts 
 {
-    // Sportsball
-    public static final String nextGame = "who do the san antonio Spurs play next in the 2025 season?";
-    public static final String bestPlayer = "Who is the best player on the San Antonio Spurs team?  Provide just the first and last as a response.";
+    public class Audio
+    {
+        /**
+         * This works well if 'ffmpeg' is on the $PATH.
+         */
+        public static final String REDUCE_FILESIZE_BUT_NOT_QUALITY = """
+                                        do not change the existing .wav files in any way.
+                                              
+                                        create a new file for each existing one, that reduces the files size but does not reduce the audio quality.
+                                              
+                                        list the new files.
+                                              
+                                        report on size and quility reduction for each new file.                                              
+                                              """;
+    }
 
-// Generate an image of the current best player for the San Antonio Spurs.     
-// Generate an image of the current best player for the Atlanta Hawks.
     
     public class Imaging
     {
@@ -53,8 +63,21 @@ public class Prompts
                                                    """;
     }
     
+    public class Music
+    {
+        private static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
+    }
+    
     public class SportsBall
     {
+//TODO: ???        
+// Generate an image of the current best player for the San Antonio Spurs.     
+// Generate an image of the current best player for the Atlanta Hawks.        
+
+//TODO: is this even used?        
+public static final String nextGame = "who do the san antonio Spurs play next in the 2025 season?";
+public static final String bestPlayer = "Who is the best player on the San Antonio Spurs team?  Provide just the first and last as a response.";
+    
         public final static String BEST_PLAYER = """
                 What is the name of one prominant NBA player 
                 currently playing for the %s?
