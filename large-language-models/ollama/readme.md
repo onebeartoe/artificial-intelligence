@@ -67,3 +67,6 @@ I got it running up to needing a Posgres database connection and stopped there.
 [https://www.the-main-thread.com/p/ai-dungeon-master-quarkus-langchain4j-java](Mastering AI Tool-Calling with Java: Build Your Own Dungeon Master with Quarkus and LangChain4j)
 
 This one looked and sounded cool but I could only bring up the HTML interface and not any responses from the AI Agent.  It gave some timeout error and was not sure where to congiure that.
+
+
+## [Up](../readme.md)

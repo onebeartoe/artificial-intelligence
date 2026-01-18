@@ -10,7 +10,7 @@ This prompt gave 4 .wav files that sounded 'okay' to me, based on my prompt.  I 
 
 <audio controls>
     <source src="music1.flac" type="audio/flac">
-    Your browser does not support the audio element.
+    whomp, whomp
 
 </audio>
 

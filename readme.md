@@ -68,7 +68,11 @@ cp /home/luke/.config/gcloud/application_default_credentials.json ~/Versioning/o
 betoland-owner/Accounts/google/ai/
 
 
-Once I had my Google Gemini/Vertex credentials, [Romin Irani’s 11 part guide](https://medium.com/google-cloud/gemini-cli-tutorial-series-77da7d494718) was really fun to go through.
+### Model Context Protocol - MCP
+
+Once I had my Google Gemini/Vertex credentials, [Romin Irani’s 11 part guide](https://medium.com/google-cloud/gemini-cli-tutorial-series-77da7d494718) was really fun to go through.  This one shows how to integrate with different MCP services, including to to build your own MCP service.
+
+###
 
 #### Gemini CLI - Text Extraction from Images/PDFs
 
