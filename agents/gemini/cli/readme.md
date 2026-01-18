@@ -1,8 +1,11 @@
 
+# Setup and Configuration
+
+See the 
 
 ------------------------------------------
 
-Inecting local (text/media/other) file contents into Prompts
+Injecting local (text/media/other) file contents into Prompts
 
 
 gemini "Summarize the key points from @{path/to/document.txt}" 

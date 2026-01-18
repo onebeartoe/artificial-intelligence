@@ -12,3 +12,4 @@ https://medium.com/google-cloud/gemini-cli-tutorial-series-part-6-more-mcp-serve
             /opt/go-bin/mcp-imagen-go 
 
 
+## [Up](../readme.md)
