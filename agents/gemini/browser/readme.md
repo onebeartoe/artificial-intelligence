@@ -1,7 +1,9 @@
 
-This is not a Gemini specific tip, but a great introduction to a workflow to create 
-videos with AI.
+# Google Gemini Browser-Based Agents
 
-    Jeff Su
-    https://www.youtube.com/watch?v=0-0gFuDwmXI
+## [Music](music/readme.md)
 
+## [Video](video/readme.md)
+
+
+## [Up](../readme.md)

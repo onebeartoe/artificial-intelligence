@@ -12,3 +12,7 @@ For the calculus input file this prompt was used in Gemini CLI
 
 
 hi @{calculus-2025-11-22-b.prompt}
+
+
+
+## [Up](../readme.md)

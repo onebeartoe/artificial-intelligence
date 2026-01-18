@@ -16,3 +16,4 @@ This article shows how to use Dev Services in Quarkius to configure a Postgres S
 %dev.quarkus.datasource.password=devsecret
 ```
 
+[Building a Secure Hybrid RAG Pipeline in Java with Quarkus and JWT](https://www.the-main-thread.com/p/secure-enterprise-rag-quarkus-jwt-tutorial) - This article builds on the previous RAG one, adding JSON Web Tokens and users and roles for authentication.

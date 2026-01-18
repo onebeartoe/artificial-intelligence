@@ -1,6 +1,13 @@
 
 # Setup and Configuration
 
+## [Audio](audio/readme.md)
+
+## [Imagen](imagen/readme.md)
+
+## [Text Extraction](text-extraction/readme.md)
+
+
 See the 
 
 ------------------------------------------
@@ -35,3 +42,7 @@ https://addyo.substack.com/p/gemini-cli-tips-and-tricks
     Multimodal AI 
 
         "Look at this UI mockup @mockup.png and produce a JavaFX GUI for it.
+
+
+
+## [Up](../readme.md)
