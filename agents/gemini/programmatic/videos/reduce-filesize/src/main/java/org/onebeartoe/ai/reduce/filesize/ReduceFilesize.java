@@ -45,7 +45,7 @@ ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
         .allowCodeExecution(true)
         .includeCodeExecutionOutput(true)
         .logRequestsAndResponses(true)
-        .
+        
                 .build();
 
         var oldPrompt = "Hello, how are you?";
