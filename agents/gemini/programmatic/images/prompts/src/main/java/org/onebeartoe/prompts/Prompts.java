@@ -70,7 +70,7 @@ public class Prompts
          * This works well if 'ffmpeg' is on the $PATH.
          */
          private static final String REDUCE_FILESIZE_BUT_NOT_QUALITY = """
-            Do not change the existing .mp4 files in any way.
+            Do not change the existing %s files in any way.
 
             Create a new file for each existing one, that reduces the files size but does not reduce the audio, image, or video quality.
 
