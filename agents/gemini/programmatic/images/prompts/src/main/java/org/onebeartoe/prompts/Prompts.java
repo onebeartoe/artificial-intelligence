@@ -105,4 +105,14 @@ public static final String bestPlayer = "Who is the best player on the San Anton
                         with the basketball and correct team uniform.
                                 """;
     }
+    
+    public class Video
+    {
+        private static final String GORILLA_ON_THE_RIVER_WALK = """
+                            Generate a video of a gorilla walking on the San Antonio River Walk.
+                            The gorilla is wearing a yellow guayabera with a bannna image on the back.
+                            The gorilla the gets into a boat and starts paddling in the river and floats away.
+                                                               
+                                                               """;
+    }
 }
