@@ -13,6 +13,7 @@
 
     <modules>
         <module>create</module>
+        <module>reduce-filesize</module>
     </modules>
 
     <properties>

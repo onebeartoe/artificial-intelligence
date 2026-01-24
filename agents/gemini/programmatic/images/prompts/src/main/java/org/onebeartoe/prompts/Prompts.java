@@ -5,24 +5,7 @@ package org.onebeartoe.prompts;
  *
  */
 public class Prompts 
-{
-    public class Audio
-    {
-        /**
-         * This works well if 'ffmpeg' is on the $PATH.
-         */
-        public static final String REDUCE_FILESIZE_BUT_NOT_QUALITY = """
-                                        do not change the existing .wav files in any way.
-                                              
-                                        create a new file for each existing one, that reduces the files size but does not reduce the audio quality.
-                                              
-                                        list the new files.
-                                              
-                                        report on size and quility reduction for each new file.                                              
-                                              """;
-    }
-
-    
+{    
     public class Imaging
     {
         public static final String IMPRESSIONIST_OIL_PAINTING = """
@@ -62,10 +45,59 @@ public class Prompts
                                         in kerosene for lighting camp fires.
                                                    """;
     }
+
+    public class Multimedia
+    {
+        public static String reduceFilesizeButNotQuality(String ... extentions)
+        {
+            String extentionsClause = null;
+                    
+            if(extentions.length == 1)
+            {
+                extentionsClause = extentions[0];
+            }
+            else
+            {
+                extentionsClause = String.join(" nor ", extentions);
+            }            
+
+            var prompt = String.format(REDUCE_FILESIZE_BUT_NOT_QUALITY, extentionsClause);
+            
+            return prompt;
+        }
+        
+        /**
+         * This works well if 'ffmpeg' is on the $PATH.
+         */
+         private static final String REDUCE_FILESIZE_BUT_NOT_QUALITY = """
+            Do not change the existing %s files in any way.
+
+            Create a new file for each existing one, that reduces the files size but does not reduce the audio, image, or video quality.
+
+            List the new files.
+
+            Report on size and quality reduction for each new file.
+                                                                       """;
+    }    
     
     public class Music
     {
         private static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
+    }
+    
+    public class RoboPizza
+    {
+        public static final String IMAGE = """
+                                           A delicious-looking pizza, close-up, micro-world, 
+                                           with cute little robot workers building the pizza.
+                                           """;
+        
+        private static final String ANIMATION = """
+                                                Make these robots animated 
+                                                and finish spreading cheese and other ingredients.  
+                                                then show them leave the pizza.  
+                                                then show the pizza after it is cooked.
+                                                """;
     }
     
     public class SportsBall
