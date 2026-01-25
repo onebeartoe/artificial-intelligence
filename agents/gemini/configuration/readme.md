@@ -13,6 +13,10 @@ This ensures your Gemini/Vertex API keys are available at run time.
 
 # Configuring Model Context Protocol (MCP) Services  
 
-The examples under cli/imagen (from Romin Irani) require MCP configuration. See the [sample settings.json file](settings.json) for details.
+The examples under cli/imagen (from Romin Irani) require MCP configuration. 
+
+See the [sample settings.json file](settings.json) for details.
+
+
 
 ## [Up](../readme.md)

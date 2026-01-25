@@ -1,6 +1,8 @@
 
 # Setup and Configuration
 
+## [Model Context Protocol](model-context-protocol/readme.md)
+
 ## [Audio](audio/readme.md)
 
 ## [Imagen](imagen/readme.md)
@@ -39,7 +41,7 @@ https://addyo.substack.com/p/gemini-cli-tips-and-tricks
 
     /corgi
 
-    Multimodal AI 
+!!!!!!][][][    Multimodal AI 
 
         "Look at this UI mockup @mockup.png and produce a JavaFX GUI for it.
 

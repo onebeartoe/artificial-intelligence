@@ -7,7 +7,15 @@
   "ui": {
     "theme": "ANSI"
   },
-  "mcpServers": {
+  "mcpServers": 
+            {
+                    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer <github_pat>"
+      }
+    },
     "veo": {
       "command": "mcp-veo-go",
       "env": {
