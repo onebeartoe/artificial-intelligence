@@ -17,45 +17,58 @@ import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
 //!!!!!!!!!!TODO: Remove the plural on Images
-public class CreateVideoFromTextAndImages extends CreateVideo
+public class CreateVideoFromTextAndImages //extends CreateVideo
 {
 
     public static void main(String[] args) throws InterruptedException, IOException 
+    {                     
+        if(args.length != 2)
+        {
+            var errorMessage = 
+                     """
+                     At least two arguments are needed to invoke this app. 
+                     The first is either the input file for text prompt or a 
+                     known final String prompt name.  The second arguement is the path to 
+                     the image file.
+                      """;
+                    
+            System.err.println(errorMessage);
+            
+            System.exit(-3);
+        }
+        
+        var textPrompt = args[0];
+        
+        var promptImagePath = args[1];
+        
+        var app = new CreateVideoFromTextAndImages();
+        
+        app.createVideoFromTextAndImage(textPrompt, promptImagePath);
+    }
+    
+    public void createVideoFromTextAndImage(String textPrompt, String promptImagePath) throws InterruptedException
     {
-//TODO: are the environment videos set correctly?        
+        
+        
+//TODO: !!!!correctly configure the content tuype        
+        Image promptImage = Image.fromFile(promptImagePath, "image/jpeg");
+        
+//TODO: are the environment variables set correctly?        
 // Initialize the client. The client will automatically use Application Default Credentials.
 // Ensure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION environment variables are set.
         Client client = Client.builder().vertexAI(true).build();
 
-        String prompt = """
-                        use the robot chicken as a 
-                            model for a cute futuristic pet
-                                    waling around nice park.
-                                            add flying cars in the         city skyline. 
-                                                    The video should have a cinematic feel.
-                                                                                           """;
-        
-        // Define the input images as Content parts        
-        Image image = Image.fromFile("robot-chicken-b.png", "image/png");
-        
-        
 
-        String tapeTextPrompt = TAPE_RECODER_UNWOUND_TEXT + """
-            .       use the image as a model for animating the text as tape printing in cursive.
-                            the tape text flow downward from the cassette.
-                                animate the word printing from left to right  spelling the word in cursive.
-                                                                                           """;
-        
-        // Define the input images as Content parts        
-        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/basics/create/tape-text-2025-12-07-0913-a.png", "image/png");
-
-
-
+ 
         // Configure video generation parameters
         GenerateVideosConfig config = GenerateVideosConfig.builder()
                 .aspectRatio("16:9") // Example aspect ratio
                 .resolution("720p")
                 .generateAudio(true)
+                
+//TODO: do it!                
+//                .durationSeconds(20)
+                
                 
 //TODO: do it!                    
 //TODO: do it!  .numberOfVideos(3);                
@@ -66,7 +79,7 @@ public class CreateVideoFromTextAndImages extends CreateVideo
         // It accepts the model ID, prompt, a list of input contents (images), and config.
         GenerateVideosOperation operation = client.models.generateVideos(
                 
-//TODO!!!!!!!1is this right????
+//TODO!!!!!!!1is this right????veo-3.1-generate-preview
 //TODO!!!!!!!1is this right????
 //TODO!!!!!!!1is this right????
 //TODO!!!!!!!1is this right????                
@@ -77,8 +90,8 @@ public class CreateVideoFromTextAndImages extends CreateVideo
 //                prompt,
 //                image,
                 
-                tapeTextPrompt,
-                tapeTextImage,
+                textPrompt,
+                promptImage,
                 
                 
                 config
@@ -97,6 +110,8 @@ public class CreateVideoFromTextAndImages extends CreateVideo
         }
         
         System.out.println("Video response recieved");
+        
+        
 
         var outputName = "video.mp4";
         
@@ -122,8 +137,9 @@ public class CreateVideoFromTextAndImages extends CreateVideo
         System.out.println("video output: " + formatedName);        
     }
 
-    @Override
-    public GenerateVideosSource videosSource() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    @Override
+//    public GenerateVideosSource videosSource() 
+//    {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 }

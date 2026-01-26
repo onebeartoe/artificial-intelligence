@@ -28,6 +28,7 @@ public class CreateVideoFromText extends CreateVideo
         
         return GenerateVideosSource.builder()
                 .prompt(promptText)                
+                
                 .build();
     }
 }
