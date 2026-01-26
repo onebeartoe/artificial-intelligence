@@ -14,6 +14,8 @@ public enum GenAIModels
     
     VEO_FAST("veo-3.0-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images."),
 
+    VEO_FAST_3_1_PREVIEW("veo-3.1-generate-preview", "Veo Fast", "Preview version of Veo 3.1"),
+    
     GEMMA("gemma", "Gemma", "Open models for efficient execution on low-resource devices.");
 
     private final String id;
