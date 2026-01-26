@@ -14,6 +14,7 @@ public class Prompts
                                         with its towers and sailing ships.
                                         """;
         
+//TODO: uppercase thsi calss name        
         public class TapeRecoderUnwoundText
         {
             public static final String TAPE_RECODER_UNWOUND_TEXT = """
@@ -140,11 +141,20 @@ public static final String bestPlayer = "Who is the best player on the San Anton
     
     public class Video
     {
-        private static final String GORILLA_ON_THE_RIVER_WALK = """
-                            Generate a video of a gorilla walking on the San Antonio River Walk.
-                            The gorilla is wearing a yellow guayabera with a bannna image on the back.
-                            The gorilla the gets into a boat and starts paddling in the river and floats away.
-                                                               
+        public static final String GORILLA_ON_THE_RIVER_WALK = """
+            Generate a video of a gorilla walking on the San Antonio River Walk.
+
+            The gorilla is a nice one and and is not intimidating at all.
+
+            The gorilla is wearing a yellow guayabera with a banana image on the back.
+
+            The gorilla is waking and then gets into a boat and starts paddling in the river.
+
+            The gorillla only makes cute noises and farts at the end of the video.
+
+            Be sure to show the gorilla turn around and smile at the camera at the end of the video.
+
+            Have playful music playing in the background.                                                               
                                                                """;
     }
 }
