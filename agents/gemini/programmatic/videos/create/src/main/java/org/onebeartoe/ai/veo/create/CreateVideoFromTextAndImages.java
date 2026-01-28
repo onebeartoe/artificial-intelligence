@@ -9,6 +9,7 @@ import com.google.genai.types.GenerateVideosConfig;
 import com.google.genai.types.Image;
 import com.google.genai.types.GenerateVideosResponse;
 import com.google.genai.types.GenerateVideosSource;
+import java.io.IO;
 
 import java.io.IOException;
 import java.util.List;
@@ -67,8 +68,9 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
                 .generateAudio(true)
                 
 //TODO: do it!                
-//                .durationSeconds(20)
-                
+//                .durationSeconds(16)
+//TODO: it does not generate anythign. 
+//TODO: is there a way to see any error message?                
                 
 //TODO: do it!                    
 //TODO: do it!  .numberOfVideos(3);                
@@ -97,19 +99,19 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
                 config
         );
 
-        System.out.println("Waiting for video generation to complete...");
+        IO.println("Waiting for video generation to complete...");
 
         // Poll the operation status until the video is ready
         while ( ! operation.done().orElse(false) ) 
         {
             Thread.sleep(10_000); // Wait for 10 seconds
             
-            System.out.print(".");
+            IO.print(".");
             
             operation = client.operations.getVideosOperation(operation, null);
         }
         
-        System.out.println("Video response recieved");
+        IO.println("Video response recieved");
         
         
 
@@ -122,7 +124,10 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
         var formatedName = Responses.formattedOutPath(outputName, formattedDate, i)
                                         .toString();
                 
+        var testResponse = operation.response()
+                .toString();
         
+        IO.println("testResponse = " + testResponse);
         
         operation.response()
             .flatMap(GenerateVideosResponse::generatedVideos)
@@ -134,7 +139,7 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
             .findFirst()
             .ifPresent(video -> client.files.download(video, formatedName, null));
         
-        System.out.println("video output: " + formatedName);        
+        IO.println("video output: " + formatedName);        
     }
 
 //    @Override

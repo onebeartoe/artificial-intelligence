@@ -8,6 +8,7 @@ import java.util.Objects;
 
 import com.google.genai.types.GenerateContentResponse;
 import com.google.genai.types.Part;
+import java.io.IO;
 //import java.io.IO;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -76,7 +77,7 @@ public class Responses
         var formattedDate = formattedDate();
         
         Path outPath = Paths.get(formattedDate + "-" + outpathPathName);
-        
+          
         IO.println("Outputting image to this path: \n" + outPath);
         
         Files.write(outPath, data);
