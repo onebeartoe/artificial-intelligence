@@ -8,12 +8,11 @@ import com.google.genai.types.GenerateVideosOperation;
 import com.google.genai.types.GenerateVideosConfig;
 import com.google.genai.types.Image;
 import com.google.genai.types.GenerateVideosResponse;
-import com.google.genai.types.GenerateVideosSource;
 import java.io.IO;
 
 import java.io.IOException;
 import java.util.List;
-import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE_RECODER_UNWOUND_TEXT;
+import static org.onebeartoe.prompts.GenAIModels.VEO_FAST_3_1_PREVIEW;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
@@ -77,25 +76,14 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
                 
                 .build();
 
+        var modelName = VEO_FAST_3_1_PREVIEW.getModelName();
+        
         // Call the generateVideos method. Note that the Java SDK handles the input types.
         // It accepts the model ID, prompt, a list of input contents (images), and config.
         GenerateVideosOperation operation = client.models.generateVideos(
-                
-//TODO!!!!!!!1is this right????veo-3.1-generate-preview
-//TODO!!!!!!!1is this right????
-//TODO!!!!!!!1is this right????
-//TODO!!!!!!!1is this right????                
-                "veo-3.1-generate-preview", // Use a suitable Veo model
-//TODO: this is an update version, add it GenAIModels.java!!!!
-
-                
-//                prompt,
-//                image,
-                
+                modelName,                
                 textPrompt,
                 promptImage,
-                
-                
                 config
         );
 
@@ -134,17 +122,12 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
             .stream()
             .flatMap(List::stream)
 //TODO:!!!!
-//TODO:!!! catch them all!!!!                 
+//TODO:!!! catch them all!!!!    
+//TODO:!!! not just the first one!!!!!!!
 //TODO:!!!!                
             .findFirst()
             .ifPresent(video -> client.files.download(video, formatedName, null));
         
         IO.println("video output: " + formatedName);        
     }
-
-//    @Override
-//    public GenerateVideosSource videosSource() 
-//    {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
 }
