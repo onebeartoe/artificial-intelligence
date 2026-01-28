@@ -1,4 +1,4 @@
-
+//TODO: make this a main class or jbang!
 package org.onebeartoe.ai.veo.create;
 
 import com.google.genai.types.Image;
