@@ -4,6 +4,13 @@ package org.onebeartoe.ai.veo.create;
 import com.google.genai.types.GenerateVideosSource;
 import org.onebeartoe.prompts.Prompts;
 
+//TODO:
+//TODO:
+//TODO: REfactor this to use just a main class and not extend the class just 
+//TODO:     to override the #parts() method.
+//TODO:
+//TODO:
+
 /**
  *
  */

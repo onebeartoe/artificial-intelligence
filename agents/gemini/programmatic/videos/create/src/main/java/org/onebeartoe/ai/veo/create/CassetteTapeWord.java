@@ -4,6 +4,12 @@ package org.onebeartoe.ai.veo.create;
 import com.google.genai.types.Image;
 import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE_RECODER_UNWOUND_TEXT;
 
+//TODO:
+//TODO:
+//TODO: REfactor this to use just a main class 
+//TODO:
+//TODO:
+
 /**
  *
  */

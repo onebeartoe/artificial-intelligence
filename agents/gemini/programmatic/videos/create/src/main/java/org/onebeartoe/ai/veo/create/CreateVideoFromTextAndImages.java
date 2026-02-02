@@ -16,6 +16,13 @@ import static org.onebeartoe.prompts.GenAIModels.VEO_FAST_3_1_PREVIEW;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
+//TODO:
+//TODO:
+//TODO: REfactor this to be more parameterized for all the other 
+//TODO:     main() class clients.
+//TODO:
+//TODO:
+
 //!!!!!!!!!!TODO: Remove the plural on Images
 public class CreateVideoFromTextAndImages //extends CreateVideo
 {

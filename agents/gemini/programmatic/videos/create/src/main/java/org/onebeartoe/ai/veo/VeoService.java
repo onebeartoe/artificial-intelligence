@@ -5,6 +5,12 @@ import com.google.genai.types.Image;
 import java.nio.file.Path;
 import java.util.Optional;
 
+//TODO:
+//TODO:
+//TODO: Does it make sense to use this as a wrapper???
+//TODO:
+//TODO:
+
 /**
  *
 

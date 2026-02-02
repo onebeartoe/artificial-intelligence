@@ -11,6 +11,13 @@ import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
+//TODO:
+//TODO:
+//TODO: Remove any redundant code
+//TODO: Sonar where are you?
+//TODO:
+//TODO:
+
 /**
  *
  */
