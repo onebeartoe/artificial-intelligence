@@ -172,6 +172,21 @@ public static final String bestPlayer = "Who is the best player on the San Anton
     
     public class Video
     {
+        private static final String DANCING_CHIHUAHUAS = """
+                Use the photos of the two chihuahuas in this directory to generate a video.
+                                                         
+                Notice that there are two distinct chihuahaus in the photos.
+                                                         
+                One is mostly black and the other is black and white.
+                                                         
+                The video shows the two chihuahuas dancing upright in a slow dance.
+                                                         
+                The background music is a Mexican folk song.
+                                                         """;
+        
+        
+        
+        
         public static final String GORILLA_ON_THE_RIVER_WALK = """
             Generate a video of a gorilla walking on the San Antonio River Walk.
 

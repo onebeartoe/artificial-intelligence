@@ -45,15 +45,11 @@
             </plugins>
         </pluginManagement>
 
-
-
-        <plugins>
-            
-
+        <plugins>            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.1</version>
                 <configuration>
                     <enablePreview>true</enablePreview>
                 </configuration>
@@ -66,7 +62,7 @@
                 -->
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.11</version>
+                <version>0.8.14</version>
                 <executions>
                     <execution>
                         <goals>
