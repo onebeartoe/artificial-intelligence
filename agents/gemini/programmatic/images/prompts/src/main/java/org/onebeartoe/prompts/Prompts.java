@@ -6,6 +6,37 @@ package org.onebeartoe.prompts;
  */
 public class Prompts 
 {    
+    public class Developer 
+    {
+        public class Testing 
+        {
+            public class Links 
+            {
+                public class Markdown
+                {
+                    public static final String INTERNAL_BROKEN_LINKS_REPORT = """
+                            read all the readme.md files under this directory and subdirectories.  
+
+                            look for any and all links.
+
+                              discard any external links.  
+
+                              external links are URLs that are not under this directory.  
+
+                              give a report on any internal link that is broken.
+
+                              the report includes a section with a file column and for each broken link. 
+
+                              the report also includes a section with a table of broken links per file. 
+
+                             the report ends with the total number of broken links.
+                                                                                                                                                             
+                                                                              """;
+                }
+            }
+        }
+    }
+    
     public class Imaging
     {
         public static final String IMPRESSIONIST_OIL_PAINTING = """
