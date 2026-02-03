@@ -172,7 +172,15 @@ public static final String bestPlayer = "Who is the best player on the San Anton
     
     public class Video
     {
-        public static final String DANCING_CHIHUAHUAS = """
+        public static final String DANCING_CHIHUAHUAS = 
+                
+                
+                "how is your day?";
+                
+                
+                
+/*
+                """
                 Use the photos of the two chihuahuas in this directory to generate a video.
                                                          
                 Notice that there are two distinct chihuahaus in the photos.
@@ -183,7 +191,7 @@ public static final String bestPlayer = "Who is the best player on the San Anton
                                                          
                 The background music is a Mexican folk song.
                                                          """;
-        
+*/        
         
         
         
