@@ -124,7 +124,7 @@ public class Prompts
                                            with cute little robot workers building the pizza.
                                            """;
         
-        private static final String ANIMATION = """
+        public static final String ANIMATION = """
                                                 Make these robots animated 
                                                 and finish spreading cheese and other ingredients.  
                                                 then show them leave the pizza.  
@@ -172,7 +172,7 @@ public static final String bestPlayer = "Who is the best player on the San Anton
     
     public class Video
     {
-        private static final String DANCING_CHIHUAHUAS = """
+        public static final String DANCING_CHIHUAHUAS = """
                 Use the photos of the two chihuahuas in this directory to generate a video.
                                                          
                 Notice that there are two distinct chihuahaus in the photos.

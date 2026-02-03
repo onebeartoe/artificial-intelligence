@@ -10,7 +10,6 @@
 ## [Text Extraction](text-extraction/readme.md)
 
 
-See the 
 
 ------------------------------------------
 
