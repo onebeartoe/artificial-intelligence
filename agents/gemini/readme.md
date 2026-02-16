@@ -1,32 +1,22 @@
  
-# Getting Started
+# Artificial Intelligence Agents with Gemni
+ 
+## [Getting Started](getting-started/readme.md)
 
-Using Gemini with CLI or in a programmatic way (Java/Python), requires setting up API keys for your environment.
+## [Prompts](prompts/readme.md)
 
-## See the [configuration directory](configuration/readme.md) for sample configuration files
+## [ADK (Agent Development Kit)](adk/readme.md)
 
-# Verify the Installation
-
-Here is an example prompt to issue to verify Gemini is set up correctly for the local environment:
-
-```
-gemini "what is the weather like in Bandera, TX?"
-```
-
+## [Text Extraction](videos/readme.md)
 
 ## [Audio / Visual](audio-visual/readme.md)
+
+## [Developer -> testing -> links -> markdown](developer/readme.md)
 
 ## [Images](images/readme.md)
 
 ## [Music](music/readme.md)
 
 ## [Video](videos/readme.md)
-
-# [Browser](browser/readme.md)
-
-# CLI
-
-# Programmatic
-
 
 ## [Up](../readme.md)
