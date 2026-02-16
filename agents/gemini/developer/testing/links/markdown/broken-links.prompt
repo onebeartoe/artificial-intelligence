@@ -1,0 +1,12 @@
+
+Review all markdown files under this directory.
+
+Markdown file have the file extension .md 
+
+Identify any broken links in the .md files.
+
+Generate a report of the broken links.
+
+The report includes a tally of broken links per file.
+
+The report includes a total tally of broken links in all the .md files.
