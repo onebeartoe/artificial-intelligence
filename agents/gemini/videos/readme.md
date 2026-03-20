@@ -27,13 +27,13 @@ This is a great introduction to a workflow to create videos with AI.
 
 ## Examples    
 
-[Dancing Chihuahuas (CLI)](cli/readme.md)
+[Dancing Chihuahuas (CLI)](dancing-chihuahuas/readme.md)
 
-...
 
-...
 
-[link](s.htm) - ploop.
+
+
+
 
 
 ## [Up](../readme.md)
