@@ -9,6 +9,11 @@ It shows how to create videos with Veo, Googles video artifial intelligence serv
 
 
 
+## Programmatic Veo Documenation
+
+[Java GenAI with Veo](https://github.com/googleapis/java-genai) - there is a full video example at the bottom.
+
+
 
 ## Agent Workflows
 
@@ -16,6 +21,8 @@ This is a great introduction to a workflow to create videos with AI.
 
     Jeff Su
     https://www.youtube.com/watch?v=0-0gFuDwmXI
+
+
 
 
 ## Examples    

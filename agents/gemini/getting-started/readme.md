@@ -15,6 +15,11 @@ gemini "what is the weather like in Bandera, TX?"
 
 The terminal should print a weather forecast.
 
+TODO: fix JBang link
+See the 
+[JBang with Gemini CLI](s.htm) 
+for details on piping data from a script to the gemini command.
+
 
 # Setup and Configuration
 
