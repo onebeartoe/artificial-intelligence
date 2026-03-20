@@ -15,7 +15,7 @@ Other artificial intelligence topics include:
 ## [Natural Language Processing (NLP)](natural-language-processing/readme.md)
 
 
-## [Large Language Models (LLMs)](large-language-models/ollama/readme.md)
+## [Large Language Models (LLMs)](large-language-models/readme.md)
 
 
 ## [Deep Learning](deep-learning/readme.md)

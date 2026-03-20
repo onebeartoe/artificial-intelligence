@@ -1,4 +1,6 @@
- 
+
+# Inktober
+
 Imagen 3 (uses Vertex AI; not free)
 
 The code for this articel can make ink drawings.
