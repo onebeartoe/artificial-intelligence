@@ -1,91 +1,26 @@
-# artificial-intelligence
 
-
-
+TODO
 **get the mediea from this locaton
 
 	*/home/luke/Workspace/owner/artificial-intellegence/
-
-
-
 
 # Artificial Intelligence
 
 Artificial intelligence is software development’s attempt to simulate human capabilities like problem solving, analysis of data, and predictions based on data.
 
-Machine learning includes image analysis, voice recognition.
+One area includes machine learning, which results in image analysis, voice recognition.
 
-Deep Learning uses neural networks to make decisions between network nodes to form a final output; categorization, sentiment, chatbots
+Other artificial intelligence topics include:
 
-## Natural Language Prossing (NLP)
+## [Natural Language Processing (NLP)](natural-language-processing/readme.md)
 
 
 ## [Large Language Models (LLMs)](large-language-models/ollama/readme.md)
 
 
+## [Deep Learning](deep-learning/readme.md)
+	   
+
+## [Agents](agents/readme.md)
 
 
-
-## Deep Learning
-	
-The [deep learning I have researched is in this repository](https://github.com/onebeartoe/deep-learning).
-
-   
-
-## Agents
-
-Artificial intelligence agents provide a way for humans to interact with pre-trained models for productivity, automation, and in the software development lifecycle.
-
-
-
-### Gemini Browser-Based Services
-
----STILL IN GOOGLE DRIVE DOC---
-
-
-### Gemini CLI
-
-One agent offered by Google is Gemini CLI.
-
-Here are some steps/commands to get started on the command line:
-
-Configure the Authentication for Google Cloud (and Application Default Credentials (ADC) )
-sudo apt-get install apt-transport-https ca-certificates gnupg curl
-
-sudo snap install google-cloud-cli 
-
-sudo snap install google-cloud-cli --classic
-
-gcloud
-
-// This next opens a browser for authentication.
-
-gcloud auth application-default login
-
-gemini
-
-cp /home/luke/.config/gcloud/application_default_credentials.json ~/Versioning/owner/
-betoland-owner/Accounts/google/ai/
-
-
-### Model Context Protocol - MCP
-
-Once I had my Google Gemini/Vertex credentials, [Romin Irani’s 11 part guide](https://medium.com/google-cloud/gemini-cli-tutorial-series-77da7d494718) was really fun to go through.  This one shows how to integrate with different MCP services, including to to build your own MCP service.
-
-###
-
-#### Gemini CLI - Text Extraction from Images/PDFs
-
-
-## Programmatic Agents
-
-### Gemini API
-
-### Agent Development Kit (Google ADK)
-
-Text Extraction 
-
-	/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/cli/text-extraction/
-
-Imagen - San Antonio
-	/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/cli/imagen/

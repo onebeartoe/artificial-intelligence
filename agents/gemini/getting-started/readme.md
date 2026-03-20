@@ -1,5 +1,27 @@
 
+# Prerequisites
 
+One agent offered by Google is Gemini CLI.
+
+Here are some steps/commands to get started on the command line:
+
+Configure the Authentication for Google Cloud (and Application Default Credentials (ADC) )
+sudo apt-get install apt-transport-https ca-certificates gnupg curl
+
+sudo snap install google-cloud-cli 
+
+sudo snap install google-cloud-cli --classic
+
+gcloud
+
+// This next opens a browser for authentication.
+gcloud auth application-default login
+
+// you should see the Gemini user interface now
+gemini
+
+
+# API Authentication
 
 Using Gemini with CLI or in a programmatic way (Java/Python), requires setting up API keys for your environment.
 
