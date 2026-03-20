@@ -3,9 +3,11 @@
  
 ## [Getting Started](getting-started/readme.md)
 
-## [Prompts](prompts/readme.md)
+## [Configuration](configuration/readme.md)
 
-## [ADK (Agent Development Kit)](adk/readme.md)
+## [Model Context Protocol](model-context-protocol/readme.md)
+
+## [Prompts](prompts/readme.md)
 
 ## [Text Extraction](videos/readme.md)
 
