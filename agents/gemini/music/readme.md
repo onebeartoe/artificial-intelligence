@@ -1,8 +1,6 @@
 
 Gemini - Music 
 
-
-
 ## [Browser](browser/readme.md)
 
 

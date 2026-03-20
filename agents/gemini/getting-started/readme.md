@@ -25,7 +25,7 @@ gemini
 
 Using Gemini with CLI or in a programmatic way (Java/Python), requires setting up API keys for your environment.
 
-## See the [configuration directory](configuration/readme.md) for sample configuration files
+## See the [configuration directory](../configuration/readme.md) for sample configuration files
 
 # Verify the Installation
 
@@ -39,19 +39,13 @@ The terminal should print a weather forecast.
 
 TODO: fix JBang link
 See the 
-[JBang with Gemini CLI](s.htm) 
+[JBang with Gemini CLI](../prompts/readme.md) 
 for details on piping data from a script to the gemini command.
 
 
-# Setup and Configuration
 
-## [Model Context Protocol](model-context-protocol/readme.md)
 
-## [Audio](audio/readme.md)
 
-## [Imagen](imagen/readme.md)
-
-## [Text Extraction](text-extraction/readme.md)
 
 
 
@@ -84,6 +78,7 @@ https://addyo.substack.com/p/gemini-cli-tips-and-tricks
 
     /corgi
 
+TODO
 !!!!!!][][][    Multimodal AI 
 
         "Look at this UI mockup @mockup.png and produce a JavaFX GUI for it.

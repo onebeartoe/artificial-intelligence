@@ -3,7 +3,7 @@
 # Google Gemini Browser-Based Agents - Video/Animations
 
 The section has some videos that were generated with the 
- [RoboPizza.IMAGE](../../gemini/programmatic/images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java) and RoboPizza.ANIMATION prompts.
+ [RoboPizza.IMAGE](../../images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java) and RoboPizza.ANIMATION prompts.
 
 ## Images
 

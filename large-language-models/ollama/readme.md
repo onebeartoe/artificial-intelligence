@@ -55,7 +55,7 @@ It has a nice glowy star crew user interface.
 
 ### Document Assistant
 
-[https://www.the-main-thread.com/p/quarkus-langchain4j-ai-document-assistant](Build an AI-Powered Document Assistant with Quarkus and LangChain4j)
+[Build an AI-Powered Document Assistant with Quarkus and LangChain4j](https://www.the-main-thread.com/p/quarkus-langchain4j-ai-document-assistant)
 
 This one looked cool and uses retrieval augmented generation (RAG), to learn about a new subject by importing documents.
 
@@ -64,7 +64,7 @@ I got it running up to needing a Posgres database connection and stopped there.
 
 ### Dungeon Master
 
-[https://www.the-main-thread.com/p/ai-dungeon-master-quarkus-langchain4j-java](Mastering AI Tool-Calling with Java: Build Your Own Dungeon Master with Quarkus and LangChain4j)
+[Mastering AI Tool-Calling with Java: Build Your Own Dungeon Master with Quarkus and LangChain4j](https://www.the-main-thread.com/p/ai-dungeon-master-quarkus-langchain4j-java)
 
 This one looked and sounded cool but I could only bring up the HTML interface and not any responses from the AI Agent.  It gave some timeout error and was not sure where to congiure that.
 
