@@ -27,7 +27,19 @@ This is a great introduction to a workflow to create videos with AI.
 
 ## Examples    
 
+[Create]()
+
 [Dancing Chihuahuas (CLI)](dancing-chihuahuas/readme.md)
+
+
+[Gorilla on River Walk]()
+
+
+[RoboPizza]()
+
+
+[Reduce Filesize]()
+
 
 
 
