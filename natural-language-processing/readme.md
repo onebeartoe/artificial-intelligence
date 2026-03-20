@@ -1,9 +1,11 @@
 
+# Natural Language Processing
 
-!!!linke to apache NLP repository
+
+I have done some research/exploring on this topic in this [Natural Language Processing Github repository](https://github.com/onebeartoe/deep-learning/tree/master/natural-language-processing)
 
 
-!!! link to LLM directory
+
 
 
 ## [Up](../readme.md)

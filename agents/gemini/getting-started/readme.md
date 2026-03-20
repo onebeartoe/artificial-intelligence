@@ -37,16 +37,9 @@ gemini "what is the weather like in Bandera, TX?"
 
 The terminal should print a weather forecast.
 
-TODO: fix JBang link
 See the 
 [JBang with Gemini CLI](../prompts/readme.md) 
 for details on piping data from a script to the gemini command.
-
-
-
-
-
-
 
 
 ------------------------------------------
@@ -78,8 +71,7 @@ https://addyo.substack.com/p/gemini-cli-tips-and-tricks
 
     /corgi
 
-TODO
-!!!!!!][][][    Multimodal AI 
+    Multimodal AI 
 
         "Look at this UI mockup @mockup.png and produce a JavaFX GUI for it.
 
