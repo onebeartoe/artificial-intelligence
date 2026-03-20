@@ -3,7 +3,9 @@ Review all markdown files under this directory.
 
 Markdown file have the file extension .md 
 
-Identify any broken links in the .md files.
+Identify any broken links to files within this repository in the .md files.
+
+Do not focus on any external links.
 
 Generate a report of the broken links.
 
