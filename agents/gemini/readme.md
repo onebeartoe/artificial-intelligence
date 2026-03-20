@@ -13,7 +13,7 @@
 
 ## [Audio / Visual](audio-visual/readme.md)
 
-## [Developer -> testing -> links -> markdown](developer/readme.md)
+## [Developer](developer/readme.md)
 
 ## [Images](images/readme.md)
 
