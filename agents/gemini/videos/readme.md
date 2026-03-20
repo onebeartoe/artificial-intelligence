@@ -32,10 +32,10 @@ This is a great introduction to a workflow to create videos with AI.
 [Dancing Chihuahuas (CLI)](dancing-chihuahuas/readme.md)
 
 
-[Gorilla on River Walk]()
-
-
 [RoboPizza]()
+
+
+[Gorilla on River Walk]()
 
 
 [Reduce Filesize]()
