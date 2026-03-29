@@ -37,6 +37,11 @@ public abstract class CreateVideo
                 .resolution("720p")
                 .generateAudio(true)
                     
+//TODO: do it!                
+//                .durationSeconds(16)
+//TODO: it does not generate anythign. 
+//TODO: is there a way to see any error message?                                
+                
 //TODO: do it!                    
 //TODO: do it!  .numberOfVideos(3);
         
@@ -106,7 +111,7 @@ var formattedDate = formattedDate();
             
         
         
-        
+//TODO: return something meaningful        
 return null;
     }
     
