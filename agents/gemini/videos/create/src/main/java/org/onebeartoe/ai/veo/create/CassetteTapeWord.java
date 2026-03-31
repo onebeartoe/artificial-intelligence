@@ -15,7 +15,11 @@ import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE
  */
 public class CassetteTapeWord 
 {
-        String tapeTextPrompt = TAPE_RECODER_UNWOUND_TEXT + """
+    public static void main(String[] args) {
+        System.out.println("Hello from CassetteTapeWord!");
+    }
+
+    String tapeTextPrompt = TAPE_RECODER_UNWOUND_TEXT + """
             .       use the image as a model for animating the text as tape printing in cursive.
                             the tape text flow downward from the cassette.
                                 animate the word printing from left to right  spelling the word in cursive.
