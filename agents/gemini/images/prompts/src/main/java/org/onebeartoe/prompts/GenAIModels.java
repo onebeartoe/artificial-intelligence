@@ -10,9 +10,9 @@ public enum GenAIModels
     
     IMAGEN("imagen", "Imagen", "Generates studio-grade images from text prompts."),
 
-    VEO("veo-3.0-generate-001", "Veo", "Generates videos from text prompts and images."),
+    VEO("veo-3.0-generate-001", "Veo", "Generates videos from text prompts and images.  This is more expensive than Veo Fast."),
     
-    VEO_FAST("veo-3.0-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images."),
+    VEO_FAST("veo-3.0-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images. Use VEO_FAST during development."),
 
     VEO_FAST_3_1_PREVIEW("veo-3.1-generate-preview", "Veo Fast", "Preview version of Veo 3.1"),
     

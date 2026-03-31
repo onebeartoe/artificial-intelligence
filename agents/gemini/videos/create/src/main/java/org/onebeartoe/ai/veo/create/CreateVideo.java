@@ -23,11 +23,10 @@ import static org.onebeartoe.prompts.Responses.formattedDate;
  */
 public abstract class CreateVideo 
 {
-//TODO:!!!!! use VEO_FAST during developemnt!!!!    
-//TODO: make this configurable    
-//    public static final String modelName = GenAIModels.VEO.getId();
     public static final String modelName = GenAIModels.VEO_FAST.getId();
-    
+ 
+//TODO: Refactor a new method that take text input
+//TODO: Refactor a new method to reuse this to take an image and text  
     public String fromText() throws InterruptedException
     {
         Client client = GenAIModels.initializeVertexClient();
@@ -81,9 +80,8 @@ var formattedDate = formattedDate();
             .flatMap(GenerateVideosResponse::generatedVideos)
             .stream()
             .flatMap(List::stream)
-//TODO:!!!!
-//TODO:!!! catch them all!!!!                 
-//TODO:!!!!                
+//TODO: maybe capture the flat map here and do the forEach() only if the size is 
+//TODO: greater than zero.  print a message empty response message
             .forEach(video ->
             {
                 char iterationChar = (char) ('a' + (char) counter.getAndIncrement() );

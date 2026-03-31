@@ -53,6 +53,9 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
         app.createVideoFromTextAndImage(textPrompt, promptImagePath);
     }
     
+    
+//TODO: make sure every item in this method in in CreateVideo.java
+//TODO: then remove this method    
     public void createVideoFromTextAndImage(String textPrompt, String promptImagePath) throws InterruptedException
     {
         

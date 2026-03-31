@@ -15,7 +15,8 @@ import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE
  */
 public class CassetteTapeWord 
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         System.out.println("Hello from CassetteTapeWord!");
     }
 
