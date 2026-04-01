@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import org.onebeartoe.prompts.Prompts;
+import static org.onebeartoe.prompts.Prompts.Music.ALBUM_COVER_WITH_lYRICS;
 
 /**
  *
@@ -26,20 +28,10 @@ public class CreateAlbumCoverForTerrie extends BananaCreate
         var lyricsPath = Path.of("imagine.lyrics");
                         
         var lyricsText = Files.readString(lyricsPath);
-                       
-//TODO: move this to Prompts.java
-        var unformattedText = """
-                         Create an image from these lyrics from the song 
-                         'Imagine' from John Lennon.
-                              
-                              Limit the the text to two lines.
-                              
-                              Use a extra super large font size for the text.
-                              
-                              Use 4:3 for the image apect ratio.
-                              
-                              Here are the lyrics: %s"
-                         """;
+        
+        var c = Prompts.Music.class;
+        
+        var unformattedText = ALBUM_COVER_WITH_lYRICS;
         
         var promptText = String.format(unformattedText, lyricsText);
         
@@ -51,4 +43,4 @@ public class CreateAlbumCoverForTerrie extends BananaCreate
         
         return parts;
   }
-} 
+}

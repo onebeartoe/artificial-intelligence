@@ -114,7 +114,21 @@ public class Prompts
     
     public class Music
     {
+//TODO: where is this used?        
         private static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
+        
+        public static final String ALBUM_COVER_WITH_lYRICS = """
+                         Create an image from these lyrics from the song 
+                         'Imagine' from John Lennon.
+                              
+                              Limit the the text to two lines.
+                              
+                              Use a extra super large font size for the text.
+                              
+                              Use 4:3 for the image apect ratio.
+                              
+                              Here are the lyrics: %s"
+                         """;
     }
     
     public class RoboPizza
