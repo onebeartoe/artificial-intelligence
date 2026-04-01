@@ -11,12 +11,13 @@ import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
-//TODO:
-//TODO:
+
 //TODO: Remove any redundant code
 //TODO: Sonar where are you?
-//TODO:
-//TODO:
+
+
+//TODO: REfactor this to be more parameterized for all the other 
+//TODO:     main() class clients.
 
 /**
  *
@@ -42,7 +43,6 @@ public abstract class CreateVideo
 //TODO: it does not generate anythign. 
 //TODO: is there a way to see any error message?                                
                 
-//TODO: do it!                    
 //TODO: do it!  .numberOfVideos(3);
         
                 .build();
