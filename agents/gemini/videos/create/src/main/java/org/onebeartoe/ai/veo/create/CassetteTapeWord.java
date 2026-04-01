@@ -1,7 +1,9 @@
 //TODO: make this a main class or jbang!
 package org.onebeartoe.ai.veo.create;
 
+import com.google.genai.types.GenerateVideosSource;
 import com.google.genai.types.Image;
+import org.onebeartoe.prompts.Prompts;
 import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE_RECODER_UNWOUND_TEXT;
 
 //TODO:
@@ -13,11 +15,15 @@ import static org.onebeartoe.prompts.Prompts.Imaging.TapeRecoderUnwoundText.TAPE
 /**
  *
  */
-public class CassetteTapeWord 
+public class CassetteTapeWord extends CreateVideo
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws InterruptedException 
     {
         System.out.println("Hello from CassetteTapeWord!");
+        
+        var app = new CassetteTapeWord();
+        
+        app.fromText();        
     }
 
     String tapeTextPrompt = TAPE_RECODER_UNWOUND_TEXT + """
@@ -27,5 +33,17 @@ public class CassetteTapeWord
                                                                                            """;
         
         // Define the input images as Content parts        
-        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/basics/create/tape-text-2025-12-07-0913-a.png", "image/png");
+        Image tapeTextImage = Image.fromFile("/home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/images/create/tape-text-2025-12-07-0913-a.png", "image/png");
+
+    
+    @Override
+    public GenerateVideosSource videosSource() 
+    {
+        var promptText = Prompts.Imaging.FunkyElectricChickenLeg.LITERAL;
+        
+        return GenerateVideosSource.builder()
+                .prompt(promptText)                
+                .image(tapeTextImage)
+                .build();
+    }            
 }

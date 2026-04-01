@@ -25,6 +25,7 @@ public abstract class CreateVideo
 {
     public static final String modelName = GenAIModels.VEO_FAST.getId();
  
+//TODO: Refactor the name of this method to imply (text) or (text and video)
 //TODO: Refactor a new method that take text input
 //TODO: Refactor a new method to reuse this to take an image and text  
     public String fromText() throws InterruptedException
