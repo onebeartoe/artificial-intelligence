@@ -14,10 +14,10 @@ TODO: add description
 ## Cassette Tape Text
 
 This video was created from the 
-[cassette tape word still image](../readme.wrong)
+[cassette tape word still image](../../images/create/readme.md)
 .
 
-It uses the 
+It uses the image
 
 
 ## [Up](../readme.md)
