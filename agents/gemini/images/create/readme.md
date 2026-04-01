@@ -1,7 +1,12 @@
 
 ## Funky Electric Chicken Leg
 
+TODO: ploop
+
 ## Album Cover
+
+TODO: ploop
+
 
 ## Cassette Tape Text
 
