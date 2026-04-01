@@ -26,6 +26,6 @@ Is there any test coverage?
 
     Ha!
 
-    https://www.youtube.com/watch?v=hHALK80t6aU&feature=em-lbrm
+    https://www.youtube.com/watch?v=hHALK80t6aU
 
     Nope, ‘LLM  as a judge’   - LaJ
