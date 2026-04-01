@@ -39,5 +39,5 @@ public class CassetteTapeWord extends CreateVideo
                 .prompt(promptText)                
                 .image(tapeTextImage)
                 .build();
-    }            
+    }
 }
