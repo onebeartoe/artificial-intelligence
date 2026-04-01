@@ -77,9 +77,7 @@ public class Responses
         
         Path outPath = Paths.get(formattedDate + "-" + outpathPathName);
 
-//TODO: add this back!!        
-//        IO.println
-System.out.println        ("Outputting image to this path: \n" + outPath);
+        IO.println("Outputting image to this path: \n" + outPath);
         
         Files.write(outPath, data);
         
