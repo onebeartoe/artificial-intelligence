@@ -17,7 +17,7 @@ import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
 //!!!!!!!!!!TODO: Remove the plural on Images
-public class CreateVideoFromTextAndImages //extends CreateVideo
+public class CreateVideoFromTextAndImage //extends CreateVideo
 {
 
     public static void main(String[] args) throws InterruptedException, IOException 
@@ -41,7 +41,7 @@ public class CreateVideoFromTextAndImages //extends CreateVideo
         
         var promptImagePath = args[1];
         
-        var app = new CreateVideoFromTextAndImages();
+        var app = new CreateVideoFromTextAndImage();
         
         app.createVideoFromTextAndImage(textPrompt, promptImagePath);
     }
