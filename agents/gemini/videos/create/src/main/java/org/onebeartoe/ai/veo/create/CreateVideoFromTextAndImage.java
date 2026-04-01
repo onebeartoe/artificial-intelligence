@@ -16,7 +16,6 @@ import static org.onebeartoe.prompts.GenAIModels.VEO_FAST_3_1_PREVIEW;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
-//!!!!!!!!!!TODO: Remove the plural on Images
 public class CreateVideoFromTextAndImage //extends CreateVideo
 {
 
@@ -53,10 +52,8 @@ public class CreateVideoFromTextAndImage //extends CreateVideo
     {
         
         
-//TODO: !!!!correctly configure the content tuype        
         Image promptImage = Image.fromFile(promptImagePath, "image/jpeg");
         
-//TODO: are the environment variables set correctly?        
 // Initialize the client. The client will automatically use Application Default Credentials.
 // Ensure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION environment variables are set.
         Client client = Client.builder().vertexAI(true).build();
@@ -69,13 +66,12 @@ public class CreateVideoFromTextAndImage //extends CreateVideo
                 .resolution("720p")
                 .generateAudio(true)
                 
-//TODO: do it!                
 //                .durationSeconds(16)
 //TODO: it does not generate anythign. 
 //TODO: is there a way to see any error message?                
                 
-//TODO: do it!                    
-//TODO: do it!  .numberOfVideos(3);                
+                  
+//TODO:         .numberOfVideos(3);                
                 
                 .build();
 
@@ -123,11 +119,7 @@ public class CreateVideoFromTextAndImage //extends CreateVideo
         operation.response()
             .flatMap(GenerateVideosResponse::generatedVideos)
             .stream()
-            .flatMap(List::stream)
-//TODO:!!!!
-//TODO:!!! catch them all!!!!    
-//TODO:!!! not just the first one!!!!!!!
-//TODO:!!!!                
+            .flatMap(List::stream)               
             .findFirst()
             .ifPresent(video -> client.files.download(video, formatedName, null));
         

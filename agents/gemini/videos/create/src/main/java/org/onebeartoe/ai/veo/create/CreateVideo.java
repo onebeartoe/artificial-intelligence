@@ -38,12 +38,13 @@ public abstract class CreateVideo
                 .resolution("720p")
                 .generateAudio(true)
                     
-//TODO: do it!                
+//TODO: I want to try this but an out of credits              
 //                .durationSeconds(16)
 //TODO: it does not generate anythign. 
 //TODO: is there a way to see any error message?                                
                 
-//TODO: do it!  .numberOfVideos(3);
+//TODO: I want to try this but an out of credits
+//TODO:           .numberOfVideos(3);
         
                 .build();
         
