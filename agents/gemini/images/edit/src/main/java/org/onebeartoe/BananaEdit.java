@@ -7,8 +7,7 @@ import com.google.genai.types.Part;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Objects;
+import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_FLASH_IMAGE;
 import org.onebeartoe.prompts.Responses;
 
 public class BananaEdit 
@@ -36,12 +35,8 @@ Client client = new Client.Builder()
                 ) 
         {
 
-//!!!!!!!!!
-//TODO:!                    
-// make this a static or enum                    
-var modelName = "gemini-2.5-flash-image";  // ehte demo has '-preivew' at the end of teh model but is inot avaialbe any more
-//        "gemini-2.5-flash-image-preview",
-//!!!!TODO above                    
+          
+var modelName = GEMINI_2_5_FLASH_IMAGE.getId();
             
 var niceDayPrompt = """
             Simplify this painting to focus on key elements, turn

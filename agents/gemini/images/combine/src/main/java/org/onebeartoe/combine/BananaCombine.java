@@ -48,7 +48,6 @@ Client client = new Client.Builder()
                     Part.fromBytes(Files.readAllBytes(Path.of("decor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("taylor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("red-dress.png")), "image/png"),
-//TODO: move this to Promps.java                    
                     Part.fromText(TAYTAY_CHANGE_DRESS_COLOR));
 
             var playerPath = "../../../../cli/imagen/imagen-imagen-4.0-fast-generate-001-20251119-033016-0.png";
