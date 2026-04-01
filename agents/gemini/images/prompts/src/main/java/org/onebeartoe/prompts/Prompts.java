@@ -45,6 +45,15 @@ public class Prompts
                                         with its towers and sailing ships.
                                         """;
         
+        public class Combine
+        {
+            public static final String TAYTAY_CHANGE_DRESS_COLOR = """
+                        Add this person to the exterior decor,
+                        and make her wear the red dress.
+                        """;
+        }
+        
+        
 //TODO: uppercase thsi calss name        
         public class TapeRecoderUnwoundText
         {
@@ -182,6 +191,12 @@ public static final String bestPlayer = "Who is the best player on the San Anton
                         of %s on the %s
                         with the basketball and correct team uniform.
                                 """;
+        
+        public final static String SWAP_PLAYER_HEAD = """
+                                                    Add this pigeon head over the basketball player's 
+                                                          head,
+                                                    and make the pigeon head about the same size as the player's head.
+                                                    """;
     }
     
     public class Video
