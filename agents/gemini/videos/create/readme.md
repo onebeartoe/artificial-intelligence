@@ -5,7 +5,7 @@
 ## Robot Chicken
 
 
-TODO: add description 
+This video was created with the robot chicken to create an animated, cute, loveable character.
 
 ## Funky Electric Chicken Leg
 

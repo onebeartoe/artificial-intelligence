@@ -6,6 +6,9 @@ they win; 'next pigeon'.
 
 So I wrote some prompts/code to look up the next opponent and popular player on that team.
 
+Then it replaces the Spurs next opponent’s main player’s head with a pigeon’s head.
+
+
 But this prompt gave a failure message
     
 // The next comment prompt gave a message about not being able to look up future

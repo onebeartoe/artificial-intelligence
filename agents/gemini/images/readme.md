@@ -12,3 +12,8 @@ The create, edit, combine examples are based on this
 ## [Combine](combine/readme.md)
 
 ## [Up](../readme.md)
+
+
+## Online Examples
+
+The [NanoBanana account on Twitter](https://x.com/NanoBanana/with_replies) has a bunch of examples.

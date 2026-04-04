@@ -15,15 +15,24 @@ from the docs: "Agent Development Kit (ADK) is a flexible and modular framework 
 
     Has a CLI and Web Interface built-in.
 
-Quick Start
 
+## Resources
+
+
+TODO: add a link
+Quick Start
     https://google.github.io/adk-docs/get-started/java/
 
-Build Your Own Agent
 
+TODO: add a link
+Build Your Own Agent
     https://google.github.io/adk-docs/tutorials/
 
 
+[Image Generation and Editing - For Marketing](https://glaforge.dev/posts/2025/09/22/creative-ai-agents-with-adk-and-nano-banana/)
+
+
+[Guillaume’s Guide to Building Agents with ADK](https://glaforge.dev/talks/2025/10/22/building-ai-agents-with-adk-for-java/)
 
 
 ## [Up](../readme.md)
