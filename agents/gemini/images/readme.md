@@ -3,7 +3,7 @@
 
 The create, edit, combine examples are based on this 
 
-This [artice from Guillaume Laforge on Banana](https://glaforge.dev/posts/2025/09/09/calling-nano-banana-from-java/) covers basic usage.
+This [article from Guillaume Laforge on Banana](https://glaforge.dev/posts/2025/09/09/calling-nano-banana-from-java/) covers basic usage.
 
 In a follow up article Guillaume covers [more Banana configuration and afterModelCallback() to chain agent calls](https://glaforge.dev/posts/2025/09/22/creative-ai-agents-with-adk-and-nano-banana/).
 
