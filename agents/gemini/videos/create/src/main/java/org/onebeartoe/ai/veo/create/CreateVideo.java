@@ -71,12 +71,8 @@ var formattedDate = formattedDate();
 
 
         AtomicInteger counter = new AtomicInteger(0);
-
-
-        
-       
+              
         var outputPath = "video.mp4";
-
         
         operation.response()
             .flatMap(GenerateVideosResponse::generatedVideos)
