@@ -124,6 +124,7 @@ public class Prompts
 //TODO: where is this used?        
         private static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
         
+//TODO: uppercase the l in LYRICS        
         public static final String ALBUM_COVER_WITH_lYRICS = """
                          Create an image from these lyrics from the song 
                          'Imagine' from John Lennon.
@@ -136,6 +137,32 @@ public class Prompts
                               
                               Here are the lyrics: %s"
                          """;
+        
+        public class Silly
+        {
+            public static final String HOW_SILLY_CAN_YOU_GET_IMAGE_DESCRIPTION = """
+                            Create an image of a sunny daytime beach scene with lots of folks.
+                            There are beach umbrellas standing in the sand.
+                            Most of the foks have a surf board and there are many people
+                            with large oversized surfboards surfing in the ocean.
+                            There is some grassy sand hills near the scene.
+                                                                                  """;
+            
+            public static final String HOW_SILLY_CAN_YOU_GET_LYRICS = """
+An uplifting song with surf guitar rifts about silliness.
+
+The lyrics should include:                                    
+                            How silly can you get, passing away the time?
+                                                                
+                            Oh yeah!
+
+                            It is wear your pants with one leg cut short day.
+
+                            Go surfing with a shotgun!
+
+                            Oh yeah!                                                                
+                                                                """;
+        }
     }
     
     public class RoboPizza
