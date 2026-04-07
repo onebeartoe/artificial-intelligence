@@ -3,8 +3,7 @@ package org.onebeartoe.ai.veo.create;
 
 import com.google.genai.types.GenerateVideosSource;
 import com.google.genai.types.Image;
-import org.onebeartoe.prompts.Prompts;
-import static org.onebeartoe.prompts.Prompts.Music.Silly.HOW_SILLY_CAN_YOU_GET_LYRICS;
+import static org.onebeartoe.prompts.Prompts.Music.Silly.HOW_SILLY_CAN_YOU_GET_IMAGE_DESCRIPTION;
 
 /**
  *
@@ -28,10 +27,11 @@ public class HowSillyCanYouGetVideo extends CreateVideo
     @Override
     public GenerateVideosSource videosSource() 
     {
-        var promptText = HOW_SILLY_CAN_YOU_GET_LYRICS + 
+        var promptText = HOW_SILLY_CAN_YOU_GET_IMAGE_DESCRIPTION + 
                 """
-                Do not show the lyrics on the video.
-                use the audio form this file: ../../music/silly-surf-song-2026-04-06-1611.mp3
+                Animate the surfers and people on the beach.
+                Show some people throwing a fresbee.
+                At the end have a cartoon shrark swallow a surfboard.
                 """;
         
         return GenerateVideosSource.builder()
