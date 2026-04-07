@@ -12,62 +12,40 @@ import org.onebeartoe.prompts.Responses;
 
 public class BananaEdit 
 {
-    public static void main(String[] args) throws IOException 
+    private final Client client;
+    
+    public BananaEdit()
     {
         var apiKey = "GEMINI_API_KEY";
-//        var apiKey = "GOOGLE_API_KEY";
         
-        try (
-//Client client = new Client.Builder()
-//    .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
-//    .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
-//    .vertexAI(true)
-//    .build()
-                
-                
-//!!                
-Client client = new Client.Builder()
-.apiKey(System.getenv(apiKey))
-.build()
-                
-                
-                
-                ) 
-        {
+        client = new Client.Builder()
+                .apiKey(System.getenv(apiKey))
+                .build();
+    }
 
-          
-var modelName = GEMINI_2_5_FLASH_IMAGE.getId();
-            
-var niceDayPrompt = """
-            Simplify this painting to focus on key elements, turn
-            this oil painting into a black and white ink noir comic
-            drawing, make the weather sunny with no clouds
-            and change the time of the day to be at daytime.
-            """;
+    public Path edit(Path inputPath, String prompt) throws IOException 
+    {        
+        var modelName = GEMINI_2_5_FLASH_IMAGE.getId();
 
-var stormyNightPrompt = """
-            Simplify this painting to focus on key elements, turn
-            this oil painting into a black and white ink noir comic
-            drawing, make the weather rainy and change the time of
-            the day to be at night.
-            """;
+        var mimeType = Files.probeContentType(inputPath);
 
-var response = client.models.generateContent(modelName,
-    Content.fromParts(
-        Part.fromBytes(
-//TODO: fix the input image, it was overwritten by having the same name
-//TODO:                             and timestamp it                
-            Files.readAllBytes(Path.of("san-antonio-riverwalk.png")), "image/png"),
-        Part.fromText(niceDayPrompt)
-    ),
-    GenerateContentConfig.builder()
-        .responseModalities("TEXT", "IMAGE")
-        .build());            
-            
+        var content = Content.fromParts(
+                Part.fromBytes(Files.readAllBytes(inputPath), mimeType),
+                Part.fromText(prompt)
+            );
 
-            var outputPathName = "san-antonio-riverwalk-edited.png";
-            
-            Responses.saveFirstBinaryPart(response, outputPathName);            
-        }
+        var config = GenerateContentConfig.builder()
+                                            .responseModalities("TEXT", "IMAGE")
+                                            .build();
+
+        var response = client.models.generateContent(modelName,
+                                        content,
+                                        config);            
+
+        var outputPathName = "edited-" + inputPath.getFileName().toString() + ".png";
+
+        Responses.saveFirstBinaryPart(response, outputPathName);
+
+        return Path.of(outputPathName);        
     }
 }
