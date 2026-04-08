@@ -8,9 +8,11 @@ import com.google.genai.types.Content;
 import com.google.genai.types.GenerateContentConfig;
 import com.google.genai.types.GenerateContentResponse;
 import com.google.genai.types.Part;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import javax.activation.FileTypeMap;
 import org.onebeartoe.prompts.GenAIModels;
 import org.onebeartoe.prompts.Prompts;
 import org.onebeartoe.prompts.Responses;
@@ -25,15 +27,26 @@ public class BananaNextPigeon
     
     public static void main(String[] args) throws IOException 
     {
+FileTypeMap defaultFileTypeMap = MimetypesFileTypeMap.getDefaultFileTypeMap();
+
+//TODO: What are we using elsewhere??
+String contentType = defaultFileTypeMap.getContentType( new File("image.png") );
+System.out.println("contentType = " + contentType);
+
+contentType = defaultFileTypeMap.getContentType( new File("image.scad") );
+System.out.println("contentType = " + contentType);
+
+contentType = defaultFileTypeMap.getContentType( new File("image.txt") );
+System.out.println("contentType = " + contentType);
+        
         var app = new BananaNextPigeon();
         
         app.nextPigeon();
         
         
-MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
-//import javax.activation.MimetypesFileTypeMap;
-//MimetypesFileTypeMap.getDefaultFileTypeMap().getContentType( new file)
-//fileTypeMap.
+//MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
+
+        
 
 
     }
