@@ -24,10 +24,10 @@ This is a great introduction to a workflow to create videos with AI.
 
 [Dancing Chihuahuas (CLI)](dancing-chihuahuas/readme.md)
 
-[RoboPizza]()
+[RoboPizza](robo-pizza/readme.md)
 
-[Gorilla on River Walk]()
+[Gorilla on River Walk](gorilla-river-walk/readme.md)
 
-[Reduce Filesize]()
+[Reduce Filesize](reduce-filesize/readme.md)
 
 ## [Up](../readme.md)
