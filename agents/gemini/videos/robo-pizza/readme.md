@@ -21,6 +21,7 @@ The section has some videos that were generated with the
 
 Be sure to see the videos in this section.  I could not find a way to embed them, but they are some in this directory.
 
+TODO: link to the .mp4 files with an thumbnail of the video
 <video controls src="download_new.mp4">
 
 <video controls src="download-3_new.mp4">

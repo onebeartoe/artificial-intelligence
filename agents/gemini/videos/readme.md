@@ -3,11 +3,12 @@
 
 The examples in this part of the repository are from this article:
 
-    https://glaforge.dev/posts/2025/09/10/generating-videos-in-java-with-veo3/
+[Generationg videos in Java With Veo3](https://glaforge.dev/posts/2025/09/10/generating-videos-in-java-with-veo3/)
+    
 
-It shows how to create videos with Veo, Googles video artificial intelligence service.
+It shows how to create videos with Veo, Google's video artificial intelligence service.
 
-## Programmatic Veo Documenation
+## Programmatic Veo Documentation
 
 [Java GenAI with Veo](https://github.com/googleapis/java-genai) - there is a full video example at the bottom.
 
