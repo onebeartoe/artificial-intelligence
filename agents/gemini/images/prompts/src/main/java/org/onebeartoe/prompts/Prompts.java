@@ -260,5 +260,37 @@ public static final String bestPlayer = "Who is the best player on the San Anton
 
             Have playful music playing in the background.                                                               
                                                                """;
+        
+        public class Editing
+        {
+//            public static final String 
+            
+            private static final String ADD_BACKGROUND_MUSIC_TO_LOOPED_VIDEO = """
+Use this file as audio input content:
+            /home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/music/silly-surf-song-1775514478035.mp3
+                                                                               
+Use this file as video input content:
+            /home/luke/Versioning/owner/github/artificial-intelligence/agents/gemini/videos/create/silly-video-2026-04-07-0623-a.mp4
+                                                                                                                                                                                                                                                                                                                                                                                                      
+Do not change the audio or video input content in any way.
+Use the audio content as background music for the video content.
+Loop the video content until it reaches the length of audio content.
+Save the new video in the current directory.
+                                                                               """;
+            
+            /**
+             * This prompt assumes the Music and Video file are also in the request 
+             * content.
+             * @return 
+             */            
+            public static String addBackgroundMusicToLoopedVideo()
+            {
+                var version = 5;
+                
+                System.out.println(Editing.class.getName() + " version: " + version);
+                
+                return ADD_BACKGROUND_MUSIC_TO_LOOPED_VIDEO;
+            }
+        }
     }
 }

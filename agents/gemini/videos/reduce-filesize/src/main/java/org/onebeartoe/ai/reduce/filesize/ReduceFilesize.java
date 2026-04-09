@@ -22,13 +22,9 @@ public class ReduceFilesize
         
         var prompt = Prompts.Multimedia.reduceFilesizeButNotQuality(extenstions);
         
-//        System.out.println("prompt = " + prompt);
-
-//System.get
-
-// Retrieve API key from environment variable
         String apiKey = System.getenv("GEMINI_API_KEY");
-        if (apiKey == null) {
+        if (apiKey == null) 
+        {
             System.err.println("Please set the GEMINI_API_KEY environment variable");
             System.exit(1);
         }
@@ -39,22 +35,16 @@ public class ReduceFilesize
 //TODO: add this to GenAIModels.java
         var modelName = "gemini-2.5-flash";
         
-ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
+        ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
                 .modelName(modelName)
-        .allowCodeExecution(true)
-        .includeCodeExecutionOutput(true)
-        .logRequestsAndResponses(true)
-        
+                .allowCodeExecution(true)
+                .includeCodeExecutionOutput(true)
+                .logRequestsAndResponses(true)        
                 .build();
-
-        var oldPrompt = "Hello, how are you?";
-        
-        
 
         String response = model.generate(prompt);
         
-        System.out.println(response);
-            
+        System.out.println(response);    
     }
 }

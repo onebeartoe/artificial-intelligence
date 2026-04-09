@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.onebeartoe.ai</groupId>
         <artifactId>banana-videos</artifactId>
         <version>1.0</version>
     </parent>
-
-    <artifactId>reduce-filesize</artifactId>
-
+    <artifactId>background-music-to-loop</artifactId>
     <packaging>jar</packaging>
-
-    <name>onebeartoe-genai-videos-reduce-filesize</name>
-
+    
+    <name>onebeartoe-genai-videos-background-music-to-loop</name>
+    
     <properties>
-        <exec.mainClass>org.onebeartoe.ai.reduce.filesize.ReduceFilesize</exec.mainClass>
+        <exec.mainClass>org.onebeartoe.ai.background.music.to.loop.BackgroundMusicToLoop</exec.mainClass>
     </properties>
     
     <dependencies>        
@@ -32,7 +27,7 @@
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.7</version>
         </dependency>
-    </dependencies>
+    </dependencies>    
     
     <build>
         <plugins>
@@ -44,7 +39,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                org.onebeartoe.ai.reduce.filesize.ReduceFilesize
+                                ${exec.mainClass}
                             </mainClass>
                         </manifest>
                     </archive>
@@ -65,5 +60,5 @@
                 </executions>
             </plugin>            
         </plugins>
-    </build>
+    </build>    
 </project>
