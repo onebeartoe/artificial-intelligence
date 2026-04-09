@@ -66,18 +66,19 @@ public class BackgroundMusicToLoop
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
                 .modelName(modelName)
-        .allowCodeExecution(true)
-        .includeCodeExecutionOutput(true)
-        .logRequestsAndResponses(true)
-        .build();
+                .allowCodeExecution(true)
+                .includeCodeExecutionOutput(true)
+                .logRequestsAndResponses(true)
+                .build();
      
         var prompt = Prompts.Video.Editing.addBackgroundMusicToLoopedVideo();
 System.out.println("prompt = " + prompt);
 
         UserMessage multiModalMessage = UserMessage.from(
-                TextContent.from(prompt),
-                AudioContent.from(musicPath ),
-                VideoContent.from(videoToLoop )
+                TextContent.from(prompt)
+                //,                
+//                AudioContent.from(musicPath ),
+//                VideoContent.from(videoToLoop )
 //                AudioContent.from(musicPath.toUri() ),
 //                VideoContent.from(videoToLoop.toUri() )
             );        

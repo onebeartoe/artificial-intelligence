@@ -285,7 +285,7 @@ Save the new video in the current directory.
              */            
             public static String addBackgroundMusicToLoopedVideo()
             {
-                var version = 5;
+                var version = 6;
                 
                 System.out.println(Editing.class.getName() + " version: " + version);
                 
