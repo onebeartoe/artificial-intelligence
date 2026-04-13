@@ -52,7 +52,18 @@ public class Prompts
                         and make her wear the red dress.
                         """;
         }
-          
+    
+        public class OpticalCharacterRecognition
+        {
+            public static final String EXTRACT_TEXT_FROM_IMAGE = """
+                                    Go through each image of a flyer
+                                    and create a table that contains the following information: 
+                                    Event Title, Event Location, Event Date.  
+                                    Do not truncate any lines and use wordwrap within the table. 
+                                    Output the table to a file named flyer-summary.text                                                                  
+                                                                  """;
+        }
+        
         public class TapeRecoderUnwoundText
         {
             public static final String TAPE_RECODER_UNWOUND_TEXT = """
