@@ -132,8 +132,7 @@ public class Prompts
     
     public class Music
     {
-//TODO: where is this used?        
-        private static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
+        public static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
         
 //TODO: uppercase the l in LYRICS        
         public static final String ALBUM_COVER_WITH_lYRICS = """
