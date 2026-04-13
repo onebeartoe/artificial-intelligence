@@ -2,16 +2,13 @@
 package org.onebeartoe.ai.background.music.to.loop;
 
 import dev.langchain4j.data.message.AiMessage;
-import dev.langchain4j.data.message.AudioContent;
 import dev.langchain4j.data.message.TextContent;
 import dev.langchain4j.data.message.UserMessage;
-import dev.langchain4j.data.message.VideoContent;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.output.Response;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
 import org.onebeartoe.prompts.Prompts;
 
 /**
