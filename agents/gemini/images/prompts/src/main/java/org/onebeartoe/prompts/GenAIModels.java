@@ -4,6 +4,8 @@ import com.google.genai.Client;
 
 public enum GenAIModels 
 {
+    GEMINI_3_1_PRO_PREVIEW("gemini-3.1-pro-preview", "Gemini 3.1 Pro", "For early access features, this is the most capable model for complex reasoning."),
+    
     GEMINI_2_5_PRO("gemini-2.5-pro", "Gemini 2.5 Pro", "Advanced reasoning model, large context window."),
     
     GEMINI_2_5_FLASH_IMAGE("gemini-2.5-flash-image", "Gemini 2.5 Flash Image", "Price-performance balance, low-latency, high-volume tasks."),

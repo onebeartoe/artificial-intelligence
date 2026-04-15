@@ -30,11 +30,33 @@ public class Prompts
                               the report also includes a section with a table of broken links per file. 
 
                              the report ends with the total number of broken links.
-                                                                                                                                                             
                                                                               """;
                 }
-            }
+            }                        
         }
+        
+        public class OpenScad
+        {
+            public static final String REPEATING_PATTERN_COASTER = """
+                        Take a look at this OpenSCAD article at the following URL on how make a coaster with a repeating pattern.
+
+                        https://www.mikekasberg.com/blog/2023/03/22/3d-printing-with-openscad.html
+
+                        Use OpenSCAD to create a script with a module that creates a coaster with a similar pattern.
+
+                        But instead of a hexagon use a %s pattern.  The harts in the new pattern do not have to touch each other.
+
+                        Also, change the outer bounding shape from a hexagon to circle.
+
+                        Provide parameters for the radius of the bounding circle.
+
+                        there is a text label in the center of the coaster.
+
+                        The text of the label is a module parameter with a default value of "Robert".
+
+                        The text label has the same height as the coaster.                                                                                                                                                
+                                                                    """;
+        }        
     }
     
     public class Imaging
