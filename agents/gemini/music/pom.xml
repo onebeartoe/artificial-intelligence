@@ -40,11 +40,10 @@
             <version>1.0</version>
         </dependency>
         
-<dependency>
-    <groupId>io.github.glaforge</groupId>
-    <artifactId>gemini-interactions-api-sdk</artifactId>
-    <version>0.8.0</version>
-</dependency>        
+        <dependency>
+            <groupId>io.github.glaforge</groupId>
+            <artifactId>gemini-interactions-api-sdk</artifactId>
+            <version>0.8.0</version>
+        </dependency>        
     </dependencies>
 </project>
-
