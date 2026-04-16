@@ -15,10 +15,5 @@
     <name>onebeartoe-artificial-intelligence-inktober</name>
     
     <dependencies>
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-vertex-ai</artifactId>
-            <version>0.35.0</version>
-        </dependency>        
     </dependencies>
 </project>
