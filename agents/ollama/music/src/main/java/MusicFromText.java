@@ -5,10 +5,7 @@ import io.github.ollama4j.OllamaAPI;
 import io.github.ollama4j.models.response.OllamaResult;
 import io.github.ollama4j.utils.Options;
 import io.github.ollama4j.utils.OptionsBuilder;
-import java.io.File;
 import java.util.HashMap;
-import java.util.List;
-import static org.onebeartoe.prompts.Prompts.Imaging.OpticalCharacterRecognition.EXTRACT_TEXT_FROM_IMAGE;
 import static org.onebeartoe.prompts.Prompts.Music.FUNKY_LITTLE_BEAT;
 
 /**
