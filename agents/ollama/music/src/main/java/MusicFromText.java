@@ -1,5 +1,5 @@
 
-package org.onebeartoe.text.extraction;
+
 
 import io.github.ollama4j.OllamaAPI;
 import io.github.ollama4j.models.response.OllamaResult;
