@@ -8,19 +8,28 @@
 
     <parent>
         <groupId>org.onebeartoe.ai</groupId>
-        <artifactId>ollama</artifactId>
+        <artifactId>agents</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>genai-text-extraction</artifactId>
     
-    <name>onebeartoe-genai-ollama-text-extraction</name>
+    <artifactId>ollama</artifactId>
+        
+    <packaging>pom</packaging>
+    
+    <name>onebeartoe-genai-ollama</name>
+
+    <modules>
+        <module>music</module>
+        <module>text-extraction</module>
+    </modules>
 
     <dependencies>
         <dependency>
             <groupId>io.github.ollama4j</groupId>
             <artifactId>ollama4j</artifactId>
             <version>1.1.0</version>
-        </dependency>
+        </dependency>        
     </dependencies>
 </project>
+
+
