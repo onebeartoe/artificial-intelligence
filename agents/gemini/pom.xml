@@ -14,7 +14,15 @@
     
     <artifactId>gemini</artifactId>
         
+    <packaging>pom</packaging>        
+        
     <name>onebeartoe-genai-gemini</name>
+
+    <modules>
+        <module>images</module>
+        <module>music</module>
+        <module>videos</module>
+    </modules>
 
     <dependencies>
         <dependency>
