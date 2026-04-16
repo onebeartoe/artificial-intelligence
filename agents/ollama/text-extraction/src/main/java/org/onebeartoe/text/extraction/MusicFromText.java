@@ -51,7 +51,8 @@ public class MusicFromText
 
             Options options = new OptionsBuilder().build();
 
-            var modelName = "llamusic/llamusic";
+//            var modelName = "ace-step";  // Ollma does not have this model, yet
+            var modelName = "llamusic/llamusic";  // kinda worked but the python script did not work
             
             // Sync Generation
             OllamaResult result = ollamaAPI.generate(modelName,
