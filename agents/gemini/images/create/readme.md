@@ -25,6 +25,8 @@ Todo: link to code
 
 ## InkTober - Using LangChain4J
 
+LangChain4J is design to work with Large Language Models in programmatic way.
+
 # Inktober
 
 Imagen 3 (uses Vertex AI; not free)
