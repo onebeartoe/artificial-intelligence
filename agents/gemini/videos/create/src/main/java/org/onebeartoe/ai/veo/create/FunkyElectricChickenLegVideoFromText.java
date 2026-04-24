@@ -7,11 +7,11 @@ import org.onebeartoe.prompts.Prompts;
 /**
  *
  */
-public class CreateVideoFromText extends CreateVideo
+public class FunkyElectricChickenLegVideoFromText extends CreateVideo
 {
     public static void main(String[] args) throws InterruptedException 
     {        
-        var app = new CreateVideoFromText();
+        var app = new FunkyElectricChickenLegVideoFromText();
         
         app.fromText();
     }    
