@@ -1,7 +1,5 @@
 
-<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
-
-
+<link rel="stylesheet" href="../../style.css">
 
 # Google Gemini with Java - How Silly Can You Get?
 
@@ -12,8 +10,11 @@
     - [Code](images/create/src/main/java/org/onebeartoe/CreateFunkyElectricChickenLeg.java)
     - [Resultant Images](images/create/readme.md#funky-chicken)
 
+- Combine
+  - [Taytay](images/combine/readme.md#taytay)
+  - Next Pigeon
 
 
-- Music
+## Music
 
 ## [Up](../readme.md)
