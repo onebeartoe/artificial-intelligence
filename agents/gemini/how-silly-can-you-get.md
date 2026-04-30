@@ -22,7 +22,7 @@
   - [Show the Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java#funky-little-beat)
   - [Play a Ditty](music/browser/)
 - Song - 'How Silly Can You Get?'
-  - Code
-  - Play the Song
+  - [Code](music/src/main/java/org/onebeartoe/genai/lyra/music/HowSillyCanYouGetSong.java)
+  - [Play the Song](music/)
 
 ## [Up](../readme.md)
