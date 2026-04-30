@@ -13,7 +13,8 @@
 - Combine
   - [Taytay](images/combine/readme.md#taytay)
   - Next Pigeon
-
+    - [Code](images/combine/src/main/java/org/onebeartoe/combine/BananaNextPigeon.java)
+    - [Resultant Images](images/combine/readme.md#next-pigeon)  
 
 ## Music
 
