@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import org.onebeartoe.prompts.Prompts;
-import static org.onebeartoe.prompts.Prompts.Music.ALBUM_COVER_WITH_lYRICS;
+import static org.onebeartoe.prompts.Prompts.Music.ALBUM_COVER_WITH_LYRICS;
 
 /**
  *
@@ -31,7 +31,7 @@ public class CreateAlbumCoverForTerrie extends BananaCreate
         
         var c = Prompts.Music.class;
         
-        var unformattedText = ALBUM_COVER_WITH_lYRICS;
+        var unformattedText = ALBUM_COVER_WITH_LYRICS;
         
         var promptText = String.format(unformattedText, lyricsText);
         

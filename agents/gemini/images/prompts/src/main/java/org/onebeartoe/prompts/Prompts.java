@@ -154,10 +154,10 @@ public class Prompts
     
     public class Music
     {
+//[](#funky-little-beat)
         public static final String FUNKY_LITTLE_BEAT = " funky little beat that you can bug out to with an upbeat mood";
         
-//TODO: uppercase the l in LYRICS        
-        public static final String ALBUM_COVER_WITH_lYRICS = """
+        public static final String ALBUM_COVER_WITH_LYRICS = """
                          Create an image from these lyrics from the song 
                          'Imagine' from John Lennon.
                               
