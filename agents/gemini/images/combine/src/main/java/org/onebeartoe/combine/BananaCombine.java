@@ -21,29 +21,15 @@ public class BananaCombine
 
     public static void main(String[] args) throws IOException 
     {
-                var apiKey = "GEMINI_API_KEY";
-//        var apiKey = "GOOGLE_API_KEY";
+        var apiKey = "GEMINI_API_KEY";
         
-        try (
-//Client client = new Client.Builder()
-//    .project(System.getenv("GOOGLE_CLOUD_PROJECT_ID"))
-//    .location(System.getenv("GOOGLE_CLOUD_LOCATION"))
-//    .vertexAI(true)
-//    .build()
-                
-                
-//!!                
-Client client = new Client.Builder()
-.apiKey(System.getenv(apiKey))
-.build()
-                
-                
-                
-                ) 
+        try(Client client = new Client.Builder()
+                .apiKey(System.getenv(apiKey))
+                .build() )
         {
             var modelName = GenAIModels.GEMINI_2_5_FLASH_IMAGE.getId();
-
-//TODO: give Taytay her own main class            
+            
+            // used for Taytay example
             var taylorContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(Path.of("decor.png")), "image/png"),
                     Part.fromBytes(Files.readAllBytes(Path.of("taylor.png")), "image/png"),
@@ -70,5 +56,4 @@ Client client = new Client.Builder()
             Responses.saveFirstBinaryPart(response, outputPathName);
         }
     }
-    
 }

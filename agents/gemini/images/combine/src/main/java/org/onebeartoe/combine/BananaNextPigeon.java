@@ -27,27 +27,20 @@ public class BananaNextPigeon
     
     public static void main(String[] args) throws IOException 
     {
-FileTypeMap defaultFileTypeMap = MimetypesFileTypeMap.getDefaultFileTypeMap();
+        FileTypeMap defaultFileTypeMap = MimetypesFileTypeMap.getDefaultFileTypeMap();
 
-//TODO: What are we using elsewhere??
-String contentType = defaultFileTypeMap.getContentType( new File("image.png") );
-System.out.println("contentType = " + contentType);
+        String contentType = defaultFileTypeMap.getContentType( new File("image.png") );
+        System.out.println("contentType = " + contentType);
 
-contentType = defaultFileTypeMap.getContentType( new File("image.scad") );
-System.out.println("contentType = " + contentType);
+        contentType = defaultFileTypeMap.getContentType( new File("image.scad") );
+        System.out.println("contentType = " + contentType);
 
-contentType = defaultFileTypeMap.getContentType( new File("image.txt") );
-System.out.println("contentType = " + contentType);
+        contentType = defaultFileTypeMap.getContentType( new File("image.txt") );
+        System.out.println("contentType = " + contentType);
         
         var app = new BananaNextPigeon();
         
         app.nextPigeon();
-        
-        
-//MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
-
-        
-
 
     }
 
@@ -101,10 +94,7 @@ System.out.println("contentType = " + contentType);
     }
 
     private void nextPigeon(Client client, Path playerImage) throws IOException 
-    {   
-//Part p = null;
-//p.fileData().get().
-        
+    {           
         var pigeonContent = Content.fromParts(
                     Part.fromBytes(Files.readAllBytes(playerImage), "image/png")
                 
