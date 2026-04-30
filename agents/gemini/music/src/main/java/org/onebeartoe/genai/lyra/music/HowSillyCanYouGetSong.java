@@ -71,7 +71,8 @@ public class HowSillyCanYouGetSong
             .ifPresent(textContent -> System.out.println("Lyrics / Structure Generated:\n" + textContent.text()));
     }
     
-    private static void saveAudio(AudioContent audio, String filename) {
+    private static void saveAudio(AudioContent audio, String filename) 
+    {
         assert(audio.data() != null);
         assert(audio.data().length > 0);
         assert("audio".equals( audio.type() ) );
@@ -81,18 +82,16 @@ public class HowSillyCanYouGetSong
         try 
         {
             Path targetPath = Paths.get(filename);
-//            Path targetPath = Paths.get("target", filename);
-//            Files.createDirectories(targetPath.getParent());
 
             // Lyria audio output natively encoded as MP3 byte stream
             byte[] audioData = audio.data();
             Files.write(targetPath, audioData);
 
             System.out.println("Saved Lyria generated audio to: " + targetPath.toAbsolutePath());
-        } catch (IOException e) {
+        } 
+        catch (IOException e) 
+        {
             System.out.println("Failed to save audio file: " + e.getMessage());
         }
-    }
-    
-    
+    }    
 }
