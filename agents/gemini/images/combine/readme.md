@@ -1,5 +1,20 @@
 
-Next Pigeon
+<link rel="stylesheet" href="../../../../style.css">
+
+# Combine Images with Gemini Banana
+
+## [](#taytay)
+## Taytay
+
+This [article from Guillaume Laforge on Banana](https://glaforge.dev/posts/2025/09/09/calling-nano-banana-from-java/), show how to create images with a text prompt and combining images.
+
+Below are the results when I ran the code unchanged.
+
+<img src="images-to-combine.png" alt="images-to-combine.png" width="50%" height="50%" />
+
+<img src="2025-11-21-0503-red-taylor-decor.png" alt="2025-11-21-0503-red-taylor-decor.png" width="50%" height="50%" />
+
+## Next Pigeon
 
 Most members of my family are San Antonio Spurs fans.  My tio has a saying when 
 they win; 'next pigeon'.
@@ -27,6 +42,17 @@ But this prompt gave a failure message
 //                mascot name.
 //                                """;
 
+<img src="pigeon-head.jpg" alt="pigeon-head.jpg" width="50%" height="50%" />
+
+<img src="2025-11-21-1052-next-pigeon.png" alt="2025-11-21-1052-next-pigeon.png" width="50%" height="50%" />
+
+<img src="2025-11-21-1151-next-pigeon.png" alt="2025-11-21-1151-next-pigeon.png" width="50%" height="50%" />
+
+<img src="2025-11-21-0529-next-pigeon.png" alt="2025-11-21-0529-next-pigeon.png" width="50%" height="50%" />
+
+
+<img src="2025-11-21-1148-next-pigeon.png" alt="2025-11-21-1148-next-pigeon.png" width="50%" height="50%" />
+
 
 
 
@@ -42,3 +68,15 @@ Pigeon Head
 Other Pigeon Head Photos
 
     https://www.gettyimages.com/photos/pigeon-head
+
+
+## Bottle Label
+
+TODO: blurb
+
+
+<img src="2025-11-27-1352-bottle-label.png" alt="2025-11-27-1352-bottle-label.png" width="50%" height="50%" />
+
+<img src="2025-11-27-1402-bottle-label.png" alt="2025-11-27-1402-bottle-label.png" width="50%" height="50%" />
+
+<img src="beto-2023-08_n.jpg" alt="beto-2023-08_n.jpg" width="50%" height="50%" />
