@@ -2,6 +2,8 @@
 
 # Create Markdown to Tag Images
 
+I asked Gemini CLI to create a single file Java application to create Markdown tags for all images in the current directory.
+
 Initial Prompt:
 
 '''

@@ -11,11 +11,18 @@
     - [Resultant Images](images/create/readme.md#funky-chicken)
 
 - Combine
-  - [Taytay + Decor + Dress](images/combine/readme.md#taytay)
+  - [Taytay + Decor + Dress](images/combine/readme.md#taytay) - (mention the article from Guillaume)
   - Next Pigeon
     - [Code](images/combine/src/main/java/org/onebeartoe/combine/BananaNextPigeon.java)
     - [Resultant Images](images/combine/readme.md#next-pigeon)  
 
 ## Music
+
+- Funky Beat (CLI)
+  - [Show the Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java#funky-little-beat)
+  - [Play a Ditty](music/browser/readme.md)
+- Song - 'How Silly Can You Get?'
+  - Code
+  - Play the Song
 
 ## [Up](../readme.md)
