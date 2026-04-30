@@ -9,7 +9,7 @@
 
 - Create
   - Funky Electric Chicken Egg
-    - Code
+    - [Code](images/create/src/main/java/org/onebeartoe/CreateFunkyElectricChickenLeg.java)
     - [Resultant Images](images/create/readme.md#funky-chicken)
 
 

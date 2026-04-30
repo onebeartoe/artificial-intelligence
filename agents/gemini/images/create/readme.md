@@ -10,9 +10,33 @@ Here are some samples:
 
 
 
+
+
+<img src="funky-electric-chicken-leg--a.png" alt="funky-electric-chicken-leg--a.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-0.png" alt="funky-electric-chicken-leg-0.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-1.png" alt="funky-electric-chicken-leg-1.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-2025-11-21-0411.png" alt="funky-electric-chicken-leg-2025-11-21-0411.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-2025-11-29-2226.png" alt="funky-electric-chicken-leg-2025-11-29-2226.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-2025-11-29-2349.png" alt="funky-electric-chicken-leg-2025-11-29-2349.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-2025-11-29-2357.png" alt="funky-electric-chicken-leg-2025-11-29-2357.png" width="50%" height="50%" />
+
+<img src="funky-electric-chicken-leg-ddd.png" alt="funky-electric-chicken-leg-ddd.png" width="50%" height="50%" />
+
+
 ## Album Cover
 
 TODO: ploop
+
+
+<img src="album-cover-2025-11-30-1928.png" alt="album-cover-2025-11-30-1928.png" width="50%" height="50%" />
+
+<img src="album-cover-2025-11-30-1932.png" alt="album-cover-2025-11-30-1932.png" width="50%" height="50%" />
 
 
 ## Cassette Tape Text
@@ -24,7 +48,9 @@ https://youtu.be/PfIuQK2Lfwg?t=8
 
 Todo: link to code
 
-TODO: embed the images
+<img src="tape-text-2025-12-07-0913-a.png" alt="tape-text-2025-12-07-0913-a.png" width="50%" height="50%" />
+
+<img src="tape-text-youtube.png" alt="tape-text-youtube.png" width="50%" height="50%" />
 
 
 [From this image, a video was made](../../videos/create/readme.md).
@@ -33,6 +59,8 @@ TODO: embed the images
 ## InkTober - Using LangChain4J
 
 LangChain4J is design to work with Large Language Models in programmatic way.
+
+<img src="imagen-image-8501277528597861928.png" alt="imagen-image-8501277528597861928.png" width="50%" height="50%" />
 
 # Inktober
 
@@ -64,6 +92,11 @@ I tried this in settings.json but gave an error for the Gemini Imagen example
      ]
 
 
+# How Silly can you get????????
+
+TODO: blerb
+
+<img src="surf-folks-2026-04-06-1533-a.png" alt="surf-folks-2026-04-06-1533-a.png" width="50%" height="50%" />
 
 
 ## [Up](../readme.md)
