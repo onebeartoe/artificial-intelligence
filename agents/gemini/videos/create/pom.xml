@@ -20,6 +20,7 @@
 
     <properties>
         <exec.mainClass>org.onebeartoe.ai.video.create.Create</exec.mainClass>
+        <maven.compiler.release>25</maven.compiler.release>
     </properties>
     
     
@@ -28,7 +29,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.6.0</version>
+                <version>3.8.0</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -53,6 +54,7 @@
                     </execution>
                 </executions>
             </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
