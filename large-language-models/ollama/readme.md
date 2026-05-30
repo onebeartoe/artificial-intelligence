@@ -3,6 +3,10 @@
 
 ## Markus Eisele Examples
 
+Some of the examples/tutorials form this author require Podman (or Docker) to run locally.  I chose to use Podman.
+
+To get those Podman-needed examples I had to run the [commands in this script to set up the environment](podman-configuration.sh) for Podman/Quarkus.
+
 ### Dad Joke Generator
 
 [Groan-Worthy Greatness: Build an AI Dad Joke Generator with Java, Quarkus, and Langchain4j](https://www.the-main-thread.com/p/quarkus-langchain4j-dad-joke-generator)
