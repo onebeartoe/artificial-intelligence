@@ -19,11 +19,25 @@
 ## Music
 
 - Funky Beat (CLI)
-  - [Show the Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java#funky-little-beat)
+  - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java#funky-little-beat)
   - [Play a Ditty](music/browser/)
 - Song - 'How Silly Can You Get?'
-  - [Show the Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+  - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
   - [Code](music/src/main/java/org/onebeartoe/genai/lyra/music/HowSillyCanYouGetSong.java)
   - [Play the Song](music/)
+
+## Video
+
+- [Reference Article by Guillaume Laforge](videos/readme.md)
+- Create (from text and image)
+  - Funky Electric chicken leg
+    - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/FunkyElectricChickenLegVideoFromText.java)
+    - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+    - [Video](videos/create/)
+  - Robot Chicken Walking
+    - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/RobotChickenVideoFromTextAndImage.java)
+    - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+    - [Video](videos/create/)  
+- Edit
 
 ## [Up](../readme.md)
