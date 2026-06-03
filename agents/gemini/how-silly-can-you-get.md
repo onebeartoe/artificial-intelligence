@@ -37,7 +37,11 @@
   - Robot Chicken Walking
     - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/RobotChickenVideoFromTextAndImage.java)
     - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
-    - [Video](videos/create/)  
+    - [Video](videos/create/)
+  - Dancing Chihuahuas (JBang but ended up with CLI)
+    - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+      [Script](videos/dancing-chihuahuas/exec-gemini-jbang.sh)
+    - [Video](videos/dancing-chihuahuas/)
 - Edit
 
 ## [Up](../readme.md)

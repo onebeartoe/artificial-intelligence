@@ -1,6 +1,6 @@
 
 # replace the value with your actual Google Gemini API Key
-export 	GEMINI_API_KEY=asd098f6_a7gh6as87h6_7gh6d8767fad987
+export 	GEMINI_API_KEY=nope_replace_me
 
 
 # in Google Cloud Console this project is called 'Gemini API'

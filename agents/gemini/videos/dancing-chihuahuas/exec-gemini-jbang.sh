@@ -17,11 +17,6 @@ mvn package
 # move back 
 cd $PROJECT_DIRECTORY
 
-echo 'do I even evaluate?'
-
-#export GEMINI_PROMPT=$(jbang GeminiJBang.java option1 option2)
-#echo $GEMINI_PROMPT
-
 export GEMINI_PROMPT=$(jbang run \
     --class-path ~/Versioning/owner/github/artificial-intelligence/agents/gemini/programmatic/images/prompts/target/prompts-1.0.jar \
     GeminiJBang.java option 1)
