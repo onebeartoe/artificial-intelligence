@@ -34,6 +34,10 @@
       - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
       - [Video (and Images)](videos/robo-pizza/)
 
+  - Gorilla on the Riverwalk! (CLI)
+      - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+      - [Video](videos/gorilla-river-walk/)
+
   - Funky Electric chicken leg
     - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/FunkyElectricChickenLegVideoFromText.java)
     - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
@@ -43,11 +47,12 @@
     - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/RobotChickenVideoFromTextAndImage.java)
     - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
     - [Video](videos/create/)
-    
+
   - Dancing Chihuahuas (JBang but ended up with CLI)
     - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
       [Script](videos/dancing-chihuahuas/exec-gemini-jbang.sh)
     - [Video](videos/dancing-chihuahuas/)
 - Edit
+    - TODO
 
 ## [Up](../readme.md)

@@ -1,11 +1,14 @@
 
+<link rel="stylesheet" href="../../style.css">
 
-# Google Gemini Browser-Based Agents - Video/Animations
+# Robo Pizza! - Google Gemini Browser-Based Agents - Video/Animations
 
 This was a test to see the amount of silliness/cuteness that Gemini Veo could make using the Browser offering.  The results were good for me and gave me confidence that it was worth it to do the same programmatically.
 
 The section has some videos that were generated with the 
  [RoboPizza.IMAGE](../../images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java) and RoboPizza.ANIMATION prompts.
+
+My favorite silly part about the videos generated was that I was able to prompt it to get the gorilla to smile and fart!
 
 ## Images
 
@@ -16,8 +19,6 @@ The section has some videos that were generated with the
 ![robot pizza 3](robo-pizza-3.jpg)
 
 ![robot pizza 4](robo-pizza-4.jpg)
-
-
 
 ## Animations/Video
 
