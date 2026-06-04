@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" href="../../style.css">
+
 # Gemini Agents - Veo for Video
 
 The examples in this part of the repository are from this article:

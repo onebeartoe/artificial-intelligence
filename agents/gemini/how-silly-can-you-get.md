@@ -59,6 +59,8 @@
     - [Video](videos/create/)
 
 - Edit
-    - TODO
+    - [Code](videos/background-music-to-loop/src/main/java/org/onebeartoe/ai/background/music/to/loop/BackgroundMusicToLoop.java)
+    - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+    - [Video](videos/background-music-to-loop/)
 
 ## [Up](../readme.md)
