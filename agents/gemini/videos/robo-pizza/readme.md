@@ -2,6 +2,8 @@
 
 # Google Gemini Browser-Based Agents - Video/Animations
 
+This was a test to see the amount of silliness/cuteness that Gemini Veo could make using the Browser offering.  The results were good for me and gave me confidence that it was worth it to do the same programmatically.
+
 The section has some videos that were generated with the 
  [RoboPizza.IMAGE](../../images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java) and RoboPizza.ANIMATION prompts.
 
