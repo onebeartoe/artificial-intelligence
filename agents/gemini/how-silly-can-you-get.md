@@ -52,6 +52,12 @@
     - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
       [Script](videos/dancing-chihuahuas/exec-gemini-jbang.sh)
     - [Video](videos/dancing-chihuahuas/)
+
+  - How Silly Can You Get?
+    - [Code](videos/create/src/main/java/org/onebeartoe/ai/veo/create/HowSillyCanYouGetVideo.java)
+    - [Prompt](images/prompts/src/main/java/org/onebeartoe/prompts/Prompts.java)
+    - [Video](videos/create/)
+
 - Edit
     - TODO
 

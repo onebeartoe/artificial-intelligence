@@ -31,7 +31,7 @@ public class HowSillyCanYouGetVideo extends CreateVideo
                 """
                 Animate the surfers and people on the beach.
                 Show some people throwing a fresbee.
-                At the end have a cartoon shrark swallow a surfboard.
+                At the end have a cartoon shark swallow a surfboard.
                 """;
         
         return GenerateVideosSource.builder()

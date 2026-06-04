@@ -19,6 +19,12 @@ This is a great introduction to a workflow to create videos with AI.
     Jeff Su
     https://www.youtube.com/watch?v=0-0gFuDwmXI
 
+## How Silly Can You Get?
+
+The whole purpose this part of the project was to see how silly can Gemini get with its output.  The inspiration for the title is from song in the movie 'Top Secret'.
+
+The video [silly-video-2026-04-07-0623-a.mp4](silly-video-2026-04-07-0623-a.mp4) is in this directory.
+
 ## Examples    
 
 [Create](create/readme.md)
