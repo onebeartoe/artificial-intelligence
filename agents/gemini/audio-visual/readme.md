@@ -1,18 +1,15 @@
 
+<link rel="stylesheet" href="../../../style.css">
 
 ## Gemini - Audio Video
 
-
-
+TODO
 ## [1771717171AudioFilesize Reduction](filesize-reduction/readme.md)
 
+TODO
 ## [17171717Filesize Reduction](filesize-reduction/readme.md)
 
-
-
-
 # Audio - Google Gemini CLI Agents
-
 
 In the browser-based section, I documented a [prompt to create some 'music'](../music/browser/readme.md).  It created the files in .wav format.
 
@@ -21,6 +18,5 @@ I used the [REDUCE_FILESIZE_BUT_NOT_QUALITY](../images/prompts/src/main/java/org
 This prompted Gemini to use ffmpeg to compress to a lossless format, FLAC.
 
 File size reduction was reported as 40%.
-
 
 ## [Up](../readme.md)

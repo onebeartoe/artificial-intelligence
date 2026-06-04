@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" href="../../../style.css">
+
 # Gemini  CLI - Image Generation
 
 The create, edit, combine examples are based on this 

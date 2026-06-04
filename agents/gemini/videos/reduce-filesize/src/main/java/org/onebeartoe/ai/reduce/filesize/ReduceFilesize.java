@@ -1,3 +1,7 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 25+
+
+//DEPS org.onebeartoe:prompts:1.0
 
 package org.onebeartoe.ai.reduce.filesize;
 
