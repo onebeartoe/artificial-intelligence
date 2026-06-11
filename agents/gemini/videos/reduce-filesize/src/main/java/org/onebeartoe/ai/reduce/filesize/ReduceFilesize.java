@@ -9,6 +9,7 @@ import org.onebeartoe.prompts.Prompts;
 
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
+import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_FLASH_IMAGE;
 import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_PRO;
 
 /**
@@ -21,8 +22,8 @@ public class ReduceFilesize
     {
         System.out.println("Hello World!");
         
-        var extenstions = new String[]{".mp4"};
-//        var extenstions = new String[]{".mp4", "mpeg"};
+//        var extenstions = new String[]{".mp4"};
+        var extenstions = new String[]{".mp4", "mpeg"};
         
         var prompt = Prompts.Multimedia.reduceFilesizeButNotQuality(extenstions);
         
@@ -34,10 +35,10 @@ public class ReduceFilesize
         }
 
 //        var originalModelName = "gemini-1.5-flash";   gave error
-//        var modelName = GEMINI_2_5_FLASH_IMAGE.getModelName();  gave error
+        var modelName = GEMINI_2_5_FLASH_IMAGE.getModelName();  // gave error
 //        var modelName = GEMINI_2_5_PRO.getModelName(); gave error
 //TODO: add this to GenAIModels.java
-        var modelName = "gemini-2.5-flash";
+//        var modelName = "gemini-2.5-flash"; // works!!!!
         
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
