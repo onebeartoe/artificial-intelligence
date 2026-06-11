@@ -13,6 +13,7 @@
     
     <properties>
         <exec.mainClass>org.onebeartoe.ai.background.music.to.loop.BackgroundMusicToLoop</exec.mainClass>
+        <maven.compiler.release>26</maven.compiler.release>
     </properties>
     
     <dependencies>        

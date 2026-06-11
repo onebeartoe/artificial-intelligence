@@ -20,7 +20,7 @@
 
     <properties>
         <exec.mainClass>org.onebeartoe.ai.video.create.Create</exec.mainClass>
-        <maven.compiler.release>25</maven.compiler.release>
+        <maven.compiler.release>26</maven.compiler.release>
     </properties>
     
     
