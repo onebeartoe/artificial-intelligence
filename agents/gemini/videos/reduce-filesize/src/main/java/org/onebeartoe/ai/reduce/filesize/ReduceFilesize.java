@@ -9,8 +9,6 @@ import org.onebeartoe.prompts.Prompts;
 
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
-import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_FLASH_IMAGE;
-import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_PRO;
 
 /**
  *
