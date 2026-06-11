@@ -15,20 +15,14 @@ public class FunkyElectricChickenLegVideoFromText extends CreateVideo
         
         app.fromText();
     }    
-    
-    
-//TODO: move this
-//TODO: rename this to textVideoSource()
-//TODO: update the argument list to include the text as a String
-//TODO: come on, man    
+      
     @Override
     public GenerateVideosSource videosSource() 
     {
         var promptText = Prompts.Imaging.FunkyElectricChickenLeg.LITERAL;
         
         return GenerateVideosSource.builder()
-                .prompt(promptText)                
-                
+                .prompt(promptText)            
                 .build();
     }
 }
