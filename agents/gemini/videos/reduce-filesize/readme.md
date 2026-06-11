@@ -5,10 +5,9 @@
 
 I wrote a prompt, [mentioned here](../../audio-visual/readme.md) that worked well for reducing the file size of audio and video files.  This was before my Gemini trial credits ran out.
 
-Before the trial ran out the agent was able to find ffmpeg and do the file size reductions in place.
+Before the trial ran out, the agent was able to find ffmpeg and do the file size reductions in place.
 
-
-After a month or so after the Gemini trial ended, I was able to use the Gemini again with limits but the models were updated and behavior changed.
+After a month or so after the Gemini trial ended, I was able to use the Gemini again with limits, but the models were updated and behavior changed.
 
 The Gemini agent could not find ffmpeg on the path programmatically anymore.
 
