@@ -9,6 +9,7 @@ import org.onebeartoe.prompts.Prompts;
 
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
+import static org.onebeartoe.prompts.GenAIModels.GEMINI_2_5_FLASH;
 
 /**
  *
@@ -20,7 +21,6 @@ public class ReduceFilesize
     {
         System.out.println("Hello World!");
         
-//        var extenstions = new String[]{".mp4"};
         var extenstions = new String[]{".mp4", "mpeg"};
         
         var prompt = Prompts.Multimedia.reduceFilesizeButNotQuality(extenstions);
@@ -32,8 +32,7 @@ public class ReduceFilesize
             System.exit(1);
         }
 
-//TODO: add this to GenAIModels.java
-        var modelName = "gemini-2.5-flash"; // works!!!!
+        var modelName = GEMINI_2_5_FLASH.toString();
         
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
