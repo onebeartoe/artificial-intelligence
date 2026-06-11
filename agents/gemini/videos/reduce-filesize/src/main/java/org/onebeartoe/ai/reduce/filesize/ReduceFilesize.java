@@ -34,11 +34,8 @@ public class ReduceFilesize
             System.exit(1);
         }
 
-//        var originalModelName = "gemini-1.5-flash";   gave error
-        var modelName = GEMINI_2_5_FLASH_IMAGE.getModelName();  // gave error
-//        var modelName = GEMINI_2_5_PRO.getModelName(); gave error
 //TODO: add this to GenAIModels.java
-//        var modelName = "gemini-2.5-flash"; // works!!!!
+        var modelName = "gemini-2.5-flash"; // works!!!!
         
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)

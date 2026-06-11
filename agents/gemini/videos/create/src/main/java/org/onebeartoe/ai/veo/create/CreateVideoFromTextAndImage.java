@@ -12,7 +12,7 @@ import com.google.genai.types.GenerateVideosResponse;
 
 import java.io.IOException;
 import java.util.List;
-import static org.onebeartoe.prompts.GenAIModels.VEO_FAST_3_1_PREVIEW;
+import static org.onebeartoe.prompts.GenAIModels.VEO_FAST_3_1;
 import org.onebeartoe.prompts.Responses;
 import static org.onebeartoe.prompts.Responses.formattedDate;
 
@@ -76,7 +76,7 @@ public class CreateVideoFromTextAndImage //extends CreateVideo
                 
                 .build();
 
-        var modelName = VEO_FAST_3_1_PREVIEW.getModelName();
+        var modelName = VEO_FAST_3_1.getModelName();
         
         // Call the generateVideos method. Note that the Java SDK handles the input types.
         // It accepts the model ID, prompt, a list of input contents (images), and config.

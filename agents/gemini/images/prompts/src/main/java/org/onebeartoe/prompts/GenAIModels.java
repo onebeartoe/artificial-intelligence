@@ -14,9 +14,7 @@ public enum GenAIModels
 
     VEO_3_1("veo-3.1-generate-001", "Veo 3.1", "Generates videos from text prompts and images.  This is more expensive than Veo Fast."),
     
-    VEO_FAST("veo-3.0-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images. Use VEO_FAST during development."),
-
-    VEO_FAST_3_1_PREVIEW("veo-3.1-generate-preview", "Veo Fast", "Preview version of Veo 3.1"),
+    VEO_FAST_3_1("veo-3.1-fast-generate-001", "Veo Fast", "Fastly generates videos from text prompts and images. Use VEO_FAST during development."),
     
     GEMMA("gemma", "Gemma", "Open models for efficient execution on low-resource devices.");
 

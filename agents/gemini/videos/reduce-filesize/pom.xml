@@ -18,6 +18,7 @@
 
     <properties>
         <exec.mainClass>org.onebeartoe.ai.reduce.filesize.ReduceFilesize</exec.mainClass>
+        <maven.compiler.release>26</maven.compiler.release>
     </properties>
     
     <dependencies>        

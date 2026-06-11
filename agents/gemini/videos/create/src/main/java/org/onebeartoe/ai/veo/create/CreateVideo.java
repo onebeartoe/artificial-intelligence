@@ -24,7 +24,7 @@ import static org.onebeartoe.prompts.Responses.formattedDate;
  */
 public abstract class CreateVideo 
 {
-    public static final String modelName = GenAIModels.VEO_FAST.getId();
+    public static final String modelName = GenAIModels.VEO_FAST_3_1.getId();
  
 //TODO: Refactor the name of this method to imply (text) or (text and video)
 //TODO: Refactor a new method that take text input
